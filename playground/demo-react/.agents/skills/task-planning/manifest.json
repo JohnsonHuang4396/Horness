@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "task-planning",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Convert an approved software design and impact ledger into small, ordered, verifiable engineering tasks with dependencies, exact target areas, rollback points, and completion evidence. Use before implementation of features, migrations, multi-file changes, or any work that should be executed in controlled batches.",
+  "entrypoint": "skills/core/task-planning/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Convert an approved software design and impact ledger into small, ordered, verifiable engineering tasks with dependencies, exact target areas, rollback points, and completion evidence. Use before implementation of features, migrations, multi-file changes, or any work that should be executed in controlled batches."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-task-planning.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:7dc35a0fc86453bc0acb7159a2802e17fc0d1bc5612eb5b3071a0970ec0331de",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:7dc35a0fc86453bc0acb7159a2802e17fc0d1bc5612eb5b3071a0970ec0331de",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:9807e2583a24ad2887c8bd5cd615023597b5bbca28b3ec2813980c80b34649ec",
+        "byte_length": 946
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:1fbf2ba48d29696f8567b46287062f22fd84022a39db9f1b8bd60706c6a013be",
+        "byte_length": 373
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:1fbeb4d9138729a3a9670059f17ed536504ca5b49c53938e419b9d91f6680f23",
+        "byte_length": 447
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:f600a887125f744d5a0608350a24b59ea2f83af780f685f5ea99207e72f741ce",
+        "byte_length": 566
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:30acd45173c2b579e272903ecefef2c5d0fb0c306994a1f31b170d74773f40a6",
+        "byte_length": 593
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:f2c15d3eab3bd80a7963202c362786cc9c57fee655553afdbcec9b93a3641cdc",
+        "byte_length": 230
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:4ba9acaf477d3ae0b4defe7518365b5ec5d8b9f2e5e2c840bdbf70f56d9b7e4b",
+        "byte_length": 3589
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:68e6950315bb4381c94bf0ad384ae9efd6af1cf10bd8733071aee6753c519fa6",
+        "byte_length": 3388
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:11eaa09f3df6b94976ec74a32d61728f36998afab0197d10b3720d09d622a823",
+        "byte_length": 673
+      }
+    ]
+  }
+}

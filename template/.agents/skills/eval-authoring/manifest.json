@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eval-authoring",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Turn real software tasks, historical failures, safety incidents, routing mistakes, and recovery defects into isolated, reproducible evaluation cases with mechanical assertions and leakage controls. Use when adding regression coverage or comparing an Agent Harness, skill, policy, adapter, or evolution candidate against a fixed baseline.",
+  "entrypoint": "skills/core/eval-authoring/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Turn real software tasks, historical failures, safety incidents, routing mistakes, and recovery defects into isolated, reproducible evaluation cases with mechanical assertions and leakage controls. Use when adding regression coverage or comparing an Agent Harness, skill, policy, adapter, or evolution candidate against a fixed baseline."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-eval-authoring.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:cd46de2b803a122619d35090830e8d3f21e9d3d728adf43ddcd13bd9648bde1c",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:cd46de2b803a122619d35090830e8d3f21e9d3d728adf43ddcd13bd9648bde1c",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:a879206bd36a32657aeb58376d49152c6e5a0eb92a936a7bf550b87e246290ad",
+        "byte_length": 947
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:64fe4259a0b62b6c1fce0717b5b037f6ca8081a6e7a74cf92f194a49d3b0a239",
+        "byte_length": 375
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:ea5956ca7716c90da32423fda81ebdcad0e2181c423849ed5a6216a5aaadb8d7",
+        "byte_length": 449
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:0247b67e62dfe108a1945b8fabf5d4ba3ae07349e5cd2607145ec7dd69d629a3",
+        "byte_length": 568
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:9ab0062d8f096e77c71012b534038951e2cabeabc4e559679e757bc15569443a",
+        "byte_length": 595
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:2e369c564eeff5c162970b5b35ff11ee2f58f698aa8926af48cbc958527fef64",
+        "byte_length": 231
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:2e08558d36e88c8265c59fbd44e19e0418192feccdd84bb4501429ce08d28bd2",
+        "byte_length": 3613
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:c11adb65c68ae7991526065b6c874b871461343fe02398c26b4ad4c6f2335ecd",
+        "byte_length": 3486
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:e7b716704bd0e139319b34b4d8f9484ba36db4b82b246de91e5fb43c657b7d64",
+        "byte_length": 674
+      }
+    ]
+  }
+}

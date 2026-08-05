@@ -1,0 +1,63 @@
+{
+  "stacks": [
+    {
+      "id": "react",
+      "label": "React 前端",
+      "lang": "ts",
+      "signals": [{ "type": "file-contains", "path": "package.json", "needle": "\"react\"" }]
+    },
+    {
+      "id": "vue",
+      "label": "Vue 前端",
+      "lang": "ts",
+      "signals": [{ "type": "file-contains", "path": "package.json", "needle": "\"vue\"" }]
+    },
+    {
+      "id": "java-spring",
+      "label": "Java Spring Boot 后端",
+      "lang": "java",
+      "signals": [{ "type": "file-contains", "path": "pom.xml", "needle": "spring-boot" }]
+    },
+    {
+      "id": "java",
+      "label": "Java 后端",
+      "lang": "java",
+      "signals": [{ "type": "file-exists", "path": "pom.xml" }]
+    },
+    {
+      "id": "node",
+      "label": "Node 服务",
+      "lang": "ts",
+      "signals": [{ "type": "file-exists", "path": "package.json" }]
+    },
+    {
+      "id": "python",
+      "label": "Python 项目",
+      "lang": "python",
+      "signals": [
+        { "type": "file-exists", "path": "requirements.txt" },
+        { "type": "file-exists", "path": "pyproject.toml" }
+      ]
+    },
+    {
+      "id": "go",
+      "label": "Go 项目",
+      "lang": "go",
+      "signals": [{ "type": "file-exists", "path": "go.mod" }]
+    },
+    {
+      "id": "rust",
+      "label": "Rust 项目",
+      "lang": "rust",
+      "signals": [{ "type": "file-exists", "path": "Cargo.toml" }]
+    }
+  ],
+  "packageManagers": [
+    { "id": "pnpm", "signals": [{ "type": "file-exists", "path": "pnpm-lock.yaml" }] },
+    { "id": "yarn", "signals": [{ "type": "file-exists", "path": "yarn.lock" }] },
+    { "id": "bun", "signals": [{ "type": "file-exists", "path": "bun.lockb" }] },
+    { "id": "npm", "signals": [{ "type": "file-exists", "path": "package-lock.json" }] },
+    { "id": "maven", "signals": [{ "type": "file-exists", "path": "pom.xml" }] },
+    { "id": "gradle", "signals": [{ "type": "file-exists", "path": "build.gradle" }] }
+  ]
+}

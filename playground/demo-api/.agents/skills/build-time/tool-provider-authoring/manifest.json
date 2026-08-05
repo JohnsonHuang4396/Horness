@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tool-provider-authoring",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Build a deterministic tool, executor, MCP, scanner, browser, sandbox, CI, or external-service provider for an Agent Harness with structured contracts, risk metadata, policy enforcement, idempotency, cancellation, redaction, evidence, and adapter tests. Use when integrating a new action surface instead of describing fixed operations in a skill.",
+  "entrypoint": "skills/build-time/tool-provider-authoring/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Build a deterministic tool, executor, MCP, scanner, browser, sandbox, CI, or external-service provider for an Agent Harness with structured contracts, risk metadata, policy enforcement, idempotency, cancellation, redaction, evidence, and adapter tests. Use when integrating a new action surface instead of describing fixed operations in a skill."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-BUILDTIME-tool-provider-authoring.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:948c179eddcf47e26bae7e38322f2058111a384af1b34301534e4125d0bc1281",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:948c179eddcf47e26bae7e38322f2058111a384af1b34301534e4125d0bc1281",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:7ae4a212c69a76e884485c4f77e61e5a4478c6107ee5290be41045d73b75b72b",
+        "byte_length": 956
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:a38ca78876411e38c90f6e6117c7fe0a9fd3fed11d316335e0923ade93cf6349",
+        "byte_length": 393
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:e63ca12342a188794e73349cbb123899d3ac39ff9ae92cb0ae422b271dbbcbe7",
+        "byte_length": 467
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:0356439c8550ebc3e6520155366b20d376a2c9069522ec3c99f9a8a246c9d6c2",
+        "byte_length": 586
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:96d74660d1aad446221c6805dc11849d671c4143e2977db2da1b9fbabd5714d7",
+        "byte_length": 613
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:a852c35a22042e979e834541a3047240f3200a17f566c2353c6854adde71d552",
+        "byte_length": 240
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:c2ef49eb67bb7af41e88fb09dbfc90a38e9397a14cbe0107e246bc84b20849d0",
+        "byte_length": 3635
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:da6c8c43041b04acfe4736ec0eeb92cffdfb85f3ff0be4afb379159f2340d584",
+        "byte_length": 3625
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:296bf36beea9d676a0431fe5234c4d51cf94a91064d23afc96070ea1d97b0394",
+        "byte_length": 683
+      }
+    ]
+  }
+}

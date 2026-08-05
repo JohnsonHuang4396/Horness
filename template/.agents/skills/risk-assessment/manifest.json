@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "risk-assessment",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Identify and control software delivery risks involving data, security, compatibility, production, external side effects, concurrency, dependencies, rollout, and recovery. Use during planning, before dangerous tool actions, and whenever new evidence changes the risk profile of a task.",
+  "entrypoint": "skills/core/risk-assessment/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Identify and control software delivery risks involving data, security, compatibility, production, external side effects, concurrency, dependencies, rollout, and recovery. Use during planning, before dangerous tool actions, and whenever new evidence changes the risk profile of a task."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-risk-assessment.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:064458dd58e004bd4edc2877e09a1e9396bb64b1b036475cc92334f87a8bd3ea",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:064458dd58e004bd4edc2877e09a1e9396bb64b1b036475cc92334f87a8bd3ea",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:2e2b74be88e6aa02bb8b082d4ec9b98d059732fd359d4e1e08306264df1529c3",
+        "byte_length": 948
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:3f56a54d6400297e57dcee2cf0aa1ee8a74a03f37b33f1d58b1c959f59c12c8e",
+        "byte_length": 377
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:d21301222523380c6b94f9fdda306fae47563768d8d6c8f46b1e4b5acbe210eb",
+        "byte_length": 451
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:306c3a678c7dce49ed2ece72172cbe067640be282508325904fa6a1f73384bb6",
+        "byte_length": 570
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:b4f456526558486f22a6ac587fcf44673c4e9d3757bcf6fc9e376e35358499eb",
+        "byte_length": 597
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:15fa7ccc40c2f7e7286792fc683e810195fc6660b57650b275582f6a92c4550a",
+        "byte_length": 232
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:9f0ff4ad959483a170cb39f04dc2668938561c720edbeecc28d6cb6adfe15a60",
+        "byte_length": 3561
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:5f118f4144e1d4c5c5955e087e71ac3871c7dddc191e855ed927c1d358ed3ca9",
+        "byte_length": 3525
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:d8f7b8f3e915cbe0fcbbf08d027e843a2a99acdbfca6d0292ba5c224fe4df504",
+        "byte_length": 675
+      }
+    ]
+  }
+}

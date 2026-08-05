@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-element-ui-v2",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "Element UI 2.x 项目的表单、表格、弹窗、分页、上传、主题和反馈工程能力，遵守 Vue 2 与项目二次封装边界。",
+  "entrypoint": "skills/stack/frontend-element-ui-v2/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "Element UI",
+      "element-ui",
+      "el-form",
+      "el-table",
+      "el-dialog"
+    ],
+    "negative": [
+      "不要在 Vue 2 项目引入 Element Plus"
+    ]
+  },
+  "dependencies": [
+    "frontend-vue2-engineering",
+    "frontend-ui-component-engineering"
+  ],
+  "conflicts": [
+    "frontend-element-plus-vue3"
+  ],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "write-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://stack/element-ui-v2",
+    "license": "MIT (source license; verify before redistribution)",
+    "content_hash": "sha256:c2441d4266013764c2af71c5bf2edb60f901b343986f7e8d752a597577bd747b",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-ui-contract",
+      "frontend-golden-task"
+    ],
+    "minimum_success_rate": 0.9,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 55,
+    "content_hash": "sha256:c2441d4266013764c2af71c5bf2edb60f901b343986f7e8d752a597577bd747b",
+    "files": [
+      {
+        "path": "api/component-api.md",
+        "kind": "reference",
+        "content_hash": "sha256:4280c37771ead55eaa75ecb00d9086de4d8e073f6a6ce9222d27dbd5d1b6c73c",
+        "byte_length": 10431
+      },
+      {
+        "path": "api/global-config.md",
+        "kind": "reference",
+        "content_hash": "sha256:bc74bcda20b205b73ddbb99e944130fc50e6ffccdfc6cd75462370fefd889a90",
+        "byte_length": 4534
+      },
+      {
+        "path": "api/props-and-events.md",
+        "kind": "reference",
+        "content_hash": "sha256:cebc2a2d5eef7cbe199cd68998afb235b58f42861202909ee1bf9a8fb1262814",
+        "byte_length": 5301
+      },
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:1c890b1d16bfacb09e26fbf161ae02b6dfe743c07e0730d1fa1661eeb600dec8",
+        "byte_length": 834
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:0b8b2f5593686ce3a43e14ff8010135e5cc90f26e3c1e0786f53145aa09eaa38",
+        "byte_length": 589
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:5cf2cf373888576d3ce25de8851c2db677adbf5051fd806c3ba144709bf04841",
+        "byte_length": 876
+      },
+      {
+        "path": "examples/components/badge.md",
+        "kind": "example",
+        "content_hash": "sha256:c79cbe7ddf48ff08c7b45c8d2989445d0d429838860129354eec37dacc7001b2",
+        "byte_length": 2768
+      },
+      {
+        "path": "examples/components/breadcrumb.md",
+        "kind": "example",
+        "content_hash": "sha256:5512cf4ce2dcc7010ce4589f63de6743e7ada9a19752f6e5146ef9b3bf918fc6",
+        "byte_length": 3501
+      },
+      {
+        "path": "examples/components/button.md",
+        "kind": "example",
+        "content_hash": "sha256:b3e73df73c1c6e800a8acaff77d62fe8722bc9f46f7cbef743816df9c5d14d86",
+        "byte_length": 3671
+      },
+      {
+        "path": "examples/components/card.md",
+        "kind": "example",
+        "content_hash": "sha256:d198a170ef4a6103ac7bfed9ca9716bed029a894eb3b076c9367417bfeea83a5",
+        "byte_length": 3045
+      },
+      {
+        "path": "examples/components/cascader.md",
+        "kind": "example",
+        "content_hash": "sha256:65e7a8280ff54dbd64e6bf481a860be687ffde12029d102a48555ccedb57d61f",
+        "byte_length": 3692
+      },
+      {
+        "path": "examples/components/checkbox.md",
+        "kind": "example",
+        "content_hash": "sha256:719ac74674d4e5746d45bca77ad6c50457f6e8a7698a055e458837143204368e",
+        "byte_length": 3627
+      },
+      {
+        "path": "examples/components/date-picker.md",
+        "kind": "example",
+        "content_hash": "sha256:f9dafc985a192cf408a2529aa34a34ebef84d2edc98aca6975e3eee82e18f290",
+        "byte_length": 3843
+      },
+      {
+        "path": "examples/components/dialog.md",
+        "kind": "example",
+        "content_hash": "sha256:c4865c3d75de659ce54c3792555cb537d7828c797d7c7837d1f0965c582edc72",
+        "byte_length": 4149
+      },
+      {
+        "path": "examples/components/drawer.md",
+        "kind": "example",
+        "content_hash": "sha256:0905b55ff1aa687e4dc97f6029043d1b35eed60f34196fcf08008bfc4d9fbcef",
+        "byte_length": 4121
+      },
+      {
+        "path": "examples/components/dropdown.md",
+        "kind": "example",
+        "content_hash": "sha256:1383f6c024b570e072ca02f0af7df6d8d322cdad3b602b573abdf0d2accf7d1c",
+        "byte_length": 4098
+      },
+      {
+        "path": "examples/components/form.md",
+        "kind": "example",
+        "content_hash": "sha256:adb9ef84b535c96f13eb4b82bd8962c417a427f876b6f6b59921db4a34f87604",
+        "byte_length": 5885
+      },
+      {
+        "path": "examples/components/input.md",
+        "kind": "example",
+        "content_hash": "sha256:40a0be27e2ad4d874f879be5fce2fb95749b36270bb212416b16a88637f10f8e",
+        "byte_length": 3773
+      },
+      {
+        "path": "examples/components/loading.md",
+        "kind": "example",
+        "content_hash": "sha256:85e3c35d30ae576de47639cc0c17a1fab1ed687009d5e8d7ccb924d86a21e950",
+        "byte_length": 3022
+      },
+      {
+        "path": "examples/components/menu.md",
+        "kind": "example",
+        "content_hash": "sha256:352553dd753a5c392efb9d85e770202f758735902be160baa16ad02ea0572e20",
+        "byte_length": 3111
+      },
+      {
+        "path": "examples/components/message-box.md",
+        "kind": "example",
+        "content_hash": "sha256:721239955b7036671afe5b38346ade3d481639caa9042f0c91f9dae374186b82",
+        "byte_length": 3418
+      },
+      {
+        "path": "examples/components/message.md",
+        "kind": "example",
+        "content_hash": "sha256:9130faeeead94681d058e190d79e0abcdb059ca6fe86a651f80ff77d1c31036a",
+        "byte_length": 2862
+      },
+      {
+        "path": "examples/components/notification.md",
+        "kind": "example",
+        "content_hash": "sha256:1d79224ed096a490b2c411b0b3484f3e418f8acf0b97a530aeaaded2decc18a8",
+        "byte_length": 2773
+      },
+      {
+        "path": "examples/components/overview.md",
+        "kind": "example",
+        "content_hash": "sha256:bed77a1a6679930f7f51fe66a3134f49a66ebeb1f8388066420b831ce11dba15",
+        "byte_length": 3605
+      },
+      {
+        "path": "examples/components/pagination.md",
+        "kind": "example",
+        "content_hash": "sha256:83fdf0c668850db93523f588cbb3ece2e3928fc545ff4d4b94a04e0f3e80ed52",
+        "byte_length": 3828
+      },
+      {
+        "path": "examples/components/popover.md",
+        "kind": "example",
+        "content_hash": "sha256:05b24692c8a2173d376b770c88f7dc5b189f69c78921fdad47de3ee6549c77fd",
+        "byte_length": 3398
+      },
+      {
+        "path": "examples/components/radio.md",
+        "kind": "example",
+        "content_hash": "sha256:5a33efcebbe646e1485bbd51a3b24ca51e4db3cdee269e0770d3ac9a63a3ace1",
+        "byte_length": 3108
+      },
+      {
+        "path": "examples/components/select.md",
+        "kind": "example",
+        "content_hash": "sha256:cb810abc3c010b5961565aa41b9b086f0c4d9d1e09616d687e6968649f4f471e",
+        "byte_length": 4607
+      },
+      {
+        "path": "examples/components/steps.md",
+        "kind": "example",
+        "content_hash": "sha256:9eec2abf18a14cd7b122f31d37db3824e4077a8dc74d6d8a7f6a53ad3b5107ab",
+        "byte_length": 4411
+      },
+      {
+        "path": "examples/components/switch.md",
+        "kind": "example",
+        "content_hash": "sha256:24fef94f6b2b63658eb8d0638724079fa9c9ca6f6036c1632bba40914a8256c6",
+        "byte_length": 2886
+      },
+      {
+        "path": "examples/components/table.md",
+        "kind": "example",
+        "content_hash": "sha256:16bb018a2fa3f2bf4321614bbd5daf13b4b57e21696c14d01ecda6573587c7be",
+        "byte_length": 6059
+      },
+      {
+        "path": "examples/components/tabs.md",
+        "kind": "example",
+        "content_hash": "sha256:9d7765b5a851377eaf0ba76ae4dd395964eab4a8e6a988426ac5ddff925d0625",
+        "byte_length": 2978
+      },
+      {
+        "path": "examples/components/tag.md",
+        "kind": "example",
+        "content_hash": "sha256:529df8c2cad5b24a5db69cb348e184ce5189deae8557ba8f0537c45534a0085f",
+        "byte_length": 3395
+      },
+      {
+        "path": "examples/components/time-picker.md",
+        "kind": "example",
+        "content_hash": "sha256:37162e38d3707d41e7dd9a76722d793f68fff0484574c2e8b11580dd88056c09",
+        "byte_length": 2878
+      },
+      {
+        "path": "examples/components/tooltip.md",
+        "kind": "example",
+        "content_hash": "sha256:470ec5d171f2cbd45bde2f6c1e17f91e740bda6698f654798bee60496c9a1ac9",
+        "byte_length": 3333
+      },
+      {
+        "path": "examples/components/transfer.md",
+        "kind": "example",
+        "content_hash": "sha256:936bcd0c61a7ba798dff0eee76fe6649a688e55c38c82f89b30b9f572e18ee9a",
+        "byte_length": 3374
+      },
+      {
+        "path": "examples/components/tree.md",
+        "kind": "example",
+        "content_hash": "sha256:716546c86f5603af08df54506aecf8ae58946dfe55f692e1c20a9ecf5cda24a1",
+        "byte_length": 4071
+      },
+      {
+        "path": "examples/components/upload.md",
+        "kind": "example",
+        "content_hash": "sha256:aedcb9f26cfe1c9b39a8490914093accb5dc6807a69f162128743273fcc52c90",
+        "byte_length": 4486
+      },
+      {
+        "path": "examples/guide/global-config.md",
+        "kind": "example",
+        "content_hash": "sha256:9d3752feb88856d24b3a1a9cca713e08b10d8072d020e5fab972fe0379326539",
+        "byte_length": 2871
+      },
+      {
+        "path": "examples/guide/i18n.md",
+        "kind": "example",
+        "content_hash": "sha256:5dc18dcf73e63133d8d54f90eb8cbee27a254e330476ee749d9c55430bc38fa7",
+        "byte_length": 3543
+      },
+      {
+        "path": "examples/guide/installation.md",
+        "kind": "example",
+        "content_hash": "sha256:02cc7b620c15c0468b7d7505ca6a4b0661ccc90b710c01cf0dc9adfdd57ec7c2",
+        "byte_length": 2540
+      },
+      {
+        "path": "examples/guide/quick-start.md",
+        "kind": "example",
+        "content_hash": "sha256:90e7ba02d69507d89928646df5cce72b7f99a6bb82bad036a2e9c7acca84292a",
+        "byte_length": 4320
+      },
+      {
+        "path": "examples/guide/theme.md",
+        "kind": "example",
+        "content_hash": "sha256:e1d950ba71fab1033d4603dc0f04ae09551979b8881d94f922a80ae7847349dc",
+        "byte_length": 3025
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:3e699c39f02dd50404d1e20d677eae3bfb5226235e1454ebc13cc1bdc34602ce",
+        "byte_length": 584
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:9512b68685eb6f0732200df121d0e441b50b42f0acd1a2c880acc9efd94afb03",
+        "byte_length": 611
+      },
+      {
+        "path": "LICENSE.txt",
+        "kind": "license",
+        "content_hash": "sha256:ea93206239abf9d7d040db26bbfab3a7431678c157b6aaa841b5efd0d8dac50b",
+        "byte_length": 1083
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:8fa5bd9f624596f7bbbf43660f41d22b50b6ecdfcc28dc6ce6cf6d37110c4064",
+        "byte_length": 576
+      },
+      {
+        "path": "references/compatibility.md",
+        "kind": "reference",
+        "content_hash": "sha256:980feeeb688a31abc7074d6079512bf0d733d3dc680ba41774c8a6b2ca57b0d5",
+        "byte_length": 1369
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:f65d7dd546716ace9e9e97e120321c3274aafaa354cd686572f7271aa485fcca",
+        "byte_length": 3429
+      },
+      {
+        "path": "references/project-boundaries.md",
+        "kind": "reference",
+        "content_hash": "sha256:66ea7b5596634697bed4a4bd447cc34d34e99357c098a75835fee8f24c1bfb39",
+        "byte_length": 867
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:a97bdfb9adfa8582462a68034a95b8accb7da7414e96ec09cf892592e5101041",
+        "byte_length": 7208
+      },
+      {
+        "path": "templates/component-usage.md",
+        "kind": "template",
+        "content_hash": "sha256:d822aa1025979882ba174156dcda0da99559f4db582692f058d48e585b8307f5",
+        "byte_length": 8316
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:eb16ddbd6239c78151e545038ab7b3d3e83927d216fb41a0cbf0a80d85f48ebf",
+        "byte_length": 682
+      },
+      {
+        "path": "templates/installation.md",
+        "kind": "template",
+        "content_hash": "sha256:127c196f8ec3b2bf23c503ba9dd93a5e7c874f5265750efc7b2769a46ee56c90",
+        "byte_length": 3483
+      },
+      {
+        "path": "templates/project-setup.md",
+        "kind": "template",
+        "content_hash": "sha256:5642337adfe2dea1feca0fb9b3faa4706f2745c2298f4a80c92832da4c41788e",
+        "byte_length": 4968
+      }
+    ]
+  }
+}

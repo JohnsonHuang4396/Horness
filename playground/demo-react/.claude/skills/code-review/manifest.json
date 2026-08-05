@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "code-review",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Review completed software changes for correctness, behavioral regressions, compatibility, edge cases, maintainability, observability, and missing tests. Use after mechanical verification or when examining a proposed diff, with findings prioritized by severity and grounded in exact code and evidence.",
+  "entrypoint": "skills/core/code-review/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Review completed software changes for correctness, behavioral regressions, compatibility, edge cases, maintainability, observability, and missing tests. Use after mechanical verification or when examining a proposed diff, with findings prioritized by severity and grounded in exact code and evidence."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-code-review.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:aaeebe523c62ff10ee3b9273aeb0bcff4d65f9757e38323925d6b3be85ba6c0a",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract",
+      "source-enhanced-catalog"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:aaeebe523c62ff10ee3b9273aeb0bcff4d65f9757e38323925d6b3be85ba6c0a",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:d8045709939ea822e174c3ba1aca51a68f9caeb51418dc5942d7359005803545",
+        "byte_length": 944
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:a46251975a95568c7c611c1921df03bd907bf39cfe52afe3f2d7f1a3b1cd2b59",
+        "byte_length": 369
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:3a5e78f6992fa51a8292bb4491edb6aa9bbc3aaa400f102b0cf2575f6351edfb",
+        "byte_length": 443
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:4e73a2b852ad893316f5aa379dafd4e74d94a9633a3f8373cc8d2f2cb46420c8",
+        "byte_length": 562
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:20f8525cdf44fb818767f215ef340854ed982d070bf89aca0167877f069b286c",
+        "byte_length": 589
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:b2d4b23daf2a83cdca73064e994286b0ef2de4225cf73f14d9f85a342f8c1896",
+        "byte_length": 228
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:5b7a76ea373660a38e3afd63a11ef6bf12631f08b5f658a072c8c087dee35c59",
+        "byte_length": 3573
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:8219a113e698753e15d75ed875f677fd7f4ba2552780f0b4416de3b690625a00",
+        "byte_length": 3511
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:69c4641913400b9b057ae61cb993696787aa17b1a13d9b256c7a8b92dd9dd1b0",
+        "byte_length": 671
+      }
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-code-review",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "审查前端变更的功能正确性、状态与副作用、响应式布局、浏览器兼容、无障碍、性能、安全、请求边界、路由和测试缺口；P0/P1 问题必须清零。",
+  "entrypoint": "skills/stack/frontend-code-review/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P8",
+    "P9"
+  ],
+  "task_types": [
+    "feature",
+    "small-change",
+    "debug",
+    "release"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "前端代码评审",
+      "组件审查",
+      "页面审查",
+      "UI 质量检查",
+      "浏览器安全检查"
+    ],
+    "negative": [
+      "不把企业红线当通用结论"
+    ]
+  },
+  "dependencies": [
+    "code-review",
+    "security-review"
+  ],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "derived://frontend-harness/code-review",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:a2ff1dede378963e6480334d548bdbc8e250e25462ad7f143d0e5cde25c10c2e",
+    "verified_at": "2026-07-30T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-pack-contract",
+      "frontend-golden-task",
+      "source-enhanced-catalog"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 14,
+    "content_hash": "sha256:a2ff1dede378963e6480334d548bdbc8e250e25462ad7f143d0e5cde25c10c2e",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:959f00292b9d73306072b9948c0bce3757c9c091fafa613873d807168e6d20a3",
+        "byte_length": 953
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:0f61ea242bd47a7f201a314db1521f0a615b425e187107872b5f274859a5f23e",
+        "byte_length": 387
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:5971ee26c76dd52656785bee5eadad2debd38becaabf939897deeb117cb5addf",
+        "byte_length": 461
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:58ce098823a9a1ea02c4d42743a7d9ef3e4748620214acebdb31e91731446f8e",
+        "byte_length": 580
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:078fb169ab169a2e30dde6e22ba89539ce7e0072277e0dadcfe9b2f06a0cc968",
+        "byte_length": 607
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:645d35d3d51f41632f2086edc902772801c61d647afc782a3517ac2c4b3100fa",
+        "byte_length": 237
+      },
+      {
+        "path": "references/check-quality.md",
+        "kind": "reference",
+        "content_hash": "sha256:2d92207d23150255ab533a2ad71749f1320825071eda0ba0ff906182e4ad13bc",
+        "byte_length": 14649
+      },
+      {
+        "path": "references/check-security.md",
+        "kind": "reference",
+        "content_hash": "sha256:52606646319fb06a8cbd58890e42ca21389e3bbc5abe029a0ec0b6385b5f7182",
+        "byte_length": 8072
+      },
+      {
+        "path": "references/check-standard.md",
+        "kind": "reference",
+        "content_hash": "sha256:79e6f6b067b310f91d1d927c7093402fca7e65480f21cd76f57476165863c74b",
+        "byte_length": 15828
+      },
+      {
+        "path": "references/code-review-report-template.md",
+        "kind": "reference",
+        "content_hash": "sha256:258d10aae6d0a62a1e67db4da370e2b67eae5448e2fd900bb6828d2c9f80e6c1",
+        "byte_length": 1988
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:8b9c3945eee92c3696918f812af48967b600eac255907b6b6423895c237d26eb",
+        "byte_length": 3477
+      },
+      {
+        "path": "scripts/get_git_diff.sh",
+        "kind": "script",
+        "content_hash": "sha256:08d198ab9f9394191a9faf492420713e2526b9212f0162091606c0a9c4b2142f",
+        "byte_length": 2074
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:04610962cbbbe21ad345a5a202e00f47c6d34594d8fc1d178b7841ee2114ead5",
+        "byte_length": 10898
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:2291a9077f95dc21f90422dc7c18e5134d2fd23f6ecd04500ad9ea37125d1a0b",
+        "byte_length": 680
+      }
+    ]
+  }
+}

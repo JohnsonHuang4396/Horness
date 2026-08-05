@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "project-discovery",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Build an exact, evidence-backed inventory of an unfamiliar repository or workspace before architecture work, broad feature changes, migrations, or cross-module refactors. Use when project structure, build entrypoints, source roots, tests, configuration, deployment, or ownership boundaries are not yet known.",
+  "entrypoint": "skills/core/project-discovery/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Build an exact, evidence-backed inventory of an unfamiliar repository or workspace before architecture work, broad feature changes, migrations, or cross-module refactors. Use when project structure, build entrypoints, source roots, tests, configuration, deployment, or ownership boundaries are not yet known."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-project-discovery.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:848aba6c4feee01d77a6bb516d5a73719b03ef93e1c303ac32c526a13393a73d",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:848aba6c4feee01d77a6bb516d5a73719b03ef93e1c303ac32c526a13393a73d",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:20ebc7bdcd94fcd6c0745d6b10e355777c55f08341ccdc5c68a24524cfa22851",
+        "byte_length": 950
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:5be987502cefcd079810ca7dbd125b5d91489320e3b2770b9f8c91383f17e3d1",
+        "byte_length": 381
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:7269a501bef04c48987d143d559ed5c3059dd4498cd52045fe841a32bc2f3154",
+        "byte_length": 455
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:f2cb10e876a4aa9269321b98cc126bb1e17e260a2d95197d66858119253bc4ba",
+        "byte_length": 574
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:270de0ef03d43ff20873811cf4a47f8522ec78630a810b32573f0299dbe38487",
+        "byte_length": 601
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:e94dc55a81d392b3b7bef29d57262addea4e3f5decaef4b398f1136afce00ad8",
+        "byte_length": 234
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:76614e0464b86741b25a60ddada6c9256e92b34f3b994bf2fce50a9948968939",
+        "byte_length": 3587
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:56b77322f8f39b1e4b45d8e15eb75d6caed53faeefcf8b3ad9148d7209ac417f",
+        "byte_length": 3512
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:4a5fad3935c3975431497c60b0d06b99a4572cf10c66c86fe5dbe7298a1d962c",
+        "byte_length": 677
+      }
+    ]
+  }
+}

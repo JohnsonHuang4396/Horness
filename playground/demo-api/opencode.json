@@ -1,0 +1,18 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "controller",
+  "instructions": [
+    "读取 AGENTS.md（Frozen 层工作规范）：每个任务走 P0→P10 阶段流水线，证据写入 .harness/host-sessions/<session>/adapter-events.jsonl，新规则/Skill 走候选审批，不读取/打印/提交秘密，默认不联网。",
+    "阶段产物模板见 .harness/templates/，角色与命令见 .opencode/agent/ 与 .opencode/command/。"
+  ],
+  "skills": {
+    "paths": [".agents/skills"]
+  },
+  "permission": {
+    "bash": {
+      ".harness/scripts/*": "allow",
+      "git *": "allow",
+      "*": "ask"
+    }
+  }
+}

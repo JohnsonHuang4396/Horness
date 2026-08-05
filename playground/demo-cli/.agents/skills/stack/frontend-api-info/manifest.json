@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-api-info",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "整理前端调用的真实接口或待定接口，记录方法、路径、参数、响应、错误、鉴权、分页和兼容性；没有可信来源时明确标注 Mock 或待确认。",
+  "entrypoint": "skills/stack/frontend-api-info/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6"
+  ],
+  "task_types": [
+    "feature",
+    "small-change",
+    "migration",
+    "debug"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "接口信息",
+      "API 联调",
+      "请求封装",
+      "接口详情",
+      "前端接口"
+    ],
+    "negative": [
+      "不伪造后端响应和权限契约"
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "derived://frontend-harness/api-info",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:1a079945084019aa6122520a88a8ae6f85f323a0dd2138f09cda4afd3fd1cc8d",
+    "verified_at": "2026-07-30T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-pack-contract",
+      "source-enhanced-catalog"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 10,
+    "content_hash": "sha256:1a079945084019aa6122520a88a8ae6f85f323a0dd2138f09cda4afd3fd1cc8d",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:6dd2b829c8294e1df96e6a922fdcfc1a305cc4c7bbe2fef2b3e82584eef961e0",
+        "byte_length": 950
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:ec3c10faad6b845b1cb1b8228763171b848ae510af91b2ce52d1800eda8eb350",
+        "byte_length": 381
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:82101da22e78a37a9a82728694b53bc34041e29312751aec32c498067851f60a",
+        "byte_length": 455
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:760674113ec45935ca0afc0c8f1d6f75322457c566edc4f0f997f534dfd2f386",
+        "byte_length": 574
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:4236c55b3ae4da6461107e5e5d190ce8fb679611720e23dbd2115c19daea9196",
+        "byte_length": 601
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:5eaec4e0a33da9942a40b88bf2c85b7d7cfe3affb7a335a63e8fe422a79d744b",
+        "byte_length": 234
+      },
+      {
+        "path": "references/api-template.md",
+        "kind": "reference",
+        "content_hash": "sha256:9d2e0363e8a8596fd786a62ec448c325d4da58524e8468d60aacb0a37eb9a05c",
+        "byte_length": 1679
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:621d9ca90c2f49f2027a68e18ca3b4e251e6aa688f4fb03edb77f775411676b1",
+        "byte_length": 3468
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:13b05ae53c0b747e129b456efec5d37f2a18adb69897ad240d1e9c9f15beeb4f",
+        "byte_length": 3419
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:17774ccb427efba89a28ab48c7dd2e293f9c71195d7235a84f12549c590e58c4",
+        "byte_length": 677
+      }
+    ]
+  }
+}

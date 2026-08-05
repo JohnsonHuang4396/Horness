@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-requirement-analysis",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "分析前端和 H5 需求，明确页面、组件、交互、状态、接口、权限、响应式、无障碍、错误和验收边界；接口未知时标记待确认，不凭空生成业务契约。",
+  "entrypoint": "skills/stack/frontend-requirement-analysis/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P0",
+    "P1"
+  ],
+  "task_types": [
+    "feature",
+    "small-change",
+    "debug"
+  ],
+  "assurance_modes": [
+    "fast",
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "页面需求",
+      "组件需求",
+      "前端功能",
+      "H5 功能",
+      "交互需求",
+      "接口联调"
+    ],
+    "negative": [
+      "不把视觉偏好当成业务事实"
+    ]
+  },
+  "dependencies": [
+    "requirement-analysis"
+  ],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "derived://frontend-harness/requirement-analysis",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:345a4eda5835b097cdbc0e054ea14d254564c9c4ca8418ffdd76e365468d1042",
+    "verified_at": "2026-07-30T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-pack-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 10,
+    "content_hash": "sha256:345a4eda5835b097cdbc0e054ea14d254564c9c4ca8418ffdd76e365468d1042",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:95db1b22d4485bb90bdcd0fb4ab6676b9e0a82159cfd7c4f48341bb67c72b4ae",
+        "byte_length": 962
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:e7eb4d763835240672749dca825ff09152fd1309e8db760e8f45a5f6e0dd095d",
+        "byte_length": 405
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:03f77b2918efb12a0175753d4fdd59396a7310a75dec8374adc7fb5adb0f22fc",
+        "byte_length": 479
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:6fe6e1c683b93c1882fa21a4f185b0acee2786c3a4522059cc0f5831966e1f28",
+        "byte_length": 598
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:e0aa8c50a2fe5253aaf9b52c0e50b7bb00dead2fab49ea0f0d708dc802103541",
+        "byte_length": 625
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:c83088f496dcd207cf4cc0d469b611fa96659ade70c27968232dd4a661769d09",
+        "byte_length": 246
+      },
+      {
+        "path": "reference/requirements-template.md",
+        "kind": "reference",
+        "content_hash": "sha256:23860ef238478f444dfe3a10b7a71813d9c0c1c12162c12882edbf01dd8ba7d0",
+        "byte_length": 2283
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:93c3fb9127e7f80678b536e5f5f59926f4204001690906e2e6005851b4a2b7fe",
+        "byte_length": 3493
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:b6c79a927f50cf11126144fad37a2f45ec3aec31dabeb37c2b0cb1403114dd33",
+        "byte_length": 2927
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:2bdb5bcd361ec1499f210b170d261533d6474b913cd7dcff3368644f85229f22",
+        "byte_length": 689
+      }
+    ]
+  }
+}

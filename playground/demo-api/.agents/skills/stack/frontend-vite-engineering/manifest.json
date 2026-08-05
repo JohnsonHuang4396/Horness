@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-vite-engineering",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "Vite 项目的配置、环境变量、插件、别名、代理、构建产物和部署路径验证能力。",
+  "entrypoint": "skills/stack/frontend-vite-engineering/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6",
+    "P7",
+    "P9"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug",
+    "release",
+    "migration"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "Vite",
+      "vite.config",
+      "import.meta.env",
+      "前端构建配置",
+      "构建产物"
+    ],
+    "negative": [
+      "不要把开发代理当生产配置",
+      "不得读取环境变量值"
+    ]
+  },
+  "dependencies": [
+    "frontend-ci-verify",
+    "dependency-diagnostics"
+  ],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [
+      "shell-process"
+    ],
+    "filesystem": "write-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://stack/vite",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:a7ad8bac30b27cddd51e449676ff0dbcd2ffeafdb7078468562e5a63c9ee25ac",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-stack-contract",
+      "frontend-build-contract"
+    ],
+    "minimum_success_rate": 0.9,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:a7ad8bac30b27cddd51e449676ff0dbcd2ffeafdb7078468562e5a63c9ee25ac",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:db162d4f74a2ec03e2f3692f91eb4e6b43318d3a5625eff921c82d508c1e1d6b",
+        "byte_length": 958
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:8fac97ab3cb7ea6daf7c3d3392e49c31726b1f5d0da27f98d08e46f98c917148",
+        "byte_length": 397
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:b5a1b1608e6f1da6962fecb65d1a3579c72036c677bb31ba87c40f2ef44003c9",
+        "byte_length": 471
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:74e625a1065c45c01d00d8e48c726b35ae1de95e2ef9a6edf8028b2e8c099fb6",
+        "byte_length": 590
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:7774f3dd4eef91170819d0c6568e82e0f9fde7761240f231ca5bced853d35fb6",
+        "byte_length": 617
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:65ed6ce4d1205201a75fa58bd003bbfa417323d1e647ab7932b001093c72423b",
+        "byte_length": 242
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:b843e5a090cfc0728d085e6f32bdc49f719b68eac5c362ea3de9ea60ba6387fc",
+        "byte_length": 3397
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7b88aa5643ccc04b64d85f572654d9955a73fc177fd5e9892db356c3bf2cd960",
+        "byte_length": 3479
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:9dc3141032823ee4bb283fd42e820561210bbfa63d5b19f33480a54e1730f416",
+        "byte_length": 685
+      }
+    ]
+  }
+}

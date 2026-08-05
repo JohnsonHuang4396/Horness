@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "requirement-analysis",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Convert vague software requests, bug reports, feature ideas, and change goals into scoped requirements, assumptions, non-goals, acceptance criteria, and clarification decisions. Use during intake or whenever later evidence shows that the requested behavior or success condition may have been misunderstood.",
+  "entrypoint": "skills/core/requirement-analysis/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Convert vague software requests, bug reports, feature ideas, and change goals into scoped requirements, assumptions, non-goals, acceptance criteria, and clarification decisions. Use during intake or whenever later evidence shows that the requested behavior or success condition may have been misunderstood."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-requirement-analysis.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:d92688dd954ee2361ba00fd607d1d64d12901c5875576f5df274d2eda68b4fd4",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:d92688dd954ee2361ba00fd607d1d64d12901c5875576f5df274d2eda68b4fd4",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:a27bfdf75cdbaea7021ff66cce9fe7c72bafd1b1c9146262dc5ff12f563e90f8",
+        "byte_length": 953
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:39bed050c0b972b7b4540f6e2723b2efc6d710bf6219fcc5736b985392796498",
+        "byte_length": 387
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:44d02aae672a0f518a872e6de38c599477d21541201b98226b4d382ceab9a366",
+        "byte_length": 461
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:9945ce4e628e42c82c47768ca2242c2336d3597b46ba81bd251954ef228619eb",
+        "byte_length": 580
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:fde3aaf8cafe7c50bdfd12269fbd991187e1fa596865d0419f0546efe189fd6c",
+        "byte_length": 607
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:1e38285a115dc63020ef773810dbb139a90c0e4ca480361dd31de219d862f29b",
+        "byte_length": 237
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:79cd40e926667b2cf0b9c3378221aa44fe1e87b33b1722a7ec94e711665ad8de",
+        "byte_length": 3588
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:9f6a01a3a0266bac7093630b9c140cd6588ee1f1a24d7d7843832ce6fc8b73f5",
+        "byte_length": 3506
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:0e3d36654ed81665a801f52d0080a9b747e5a1873bad20116edf61290ba3d379",
+        "byte_length": 680
+      }
+    ]
+  }
+}

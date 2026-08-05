@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-http-contract",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "维护前端 HTTP/API 调用、请求封装、鉴权、错误、分页、上传下载和接口类型，要求每个结论有真实契约来源，不伪造后端行为。",
+  "entrypoint": "skills/stack/frontend-http-contract/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P2",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug",
+    "migration"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "应用接口 API",
+      "接口契约",
+      "网络请求",
+      "接口联调",
+      "HTTP",
+      "文件上传",
+      "文件下载",
+      "接口鉴权"
+    ],
+    "negative": [
+      "没有真实来源时禁止编造响应和权限契约"
+    ]
+  },
+  "dependencies": [
+    "frontend-api-info",
+    "frontend-code-review"
+  ],
+  "conflicts": [],
+  "replaces": [
+    "frontend-api-info"
+  ],
+  "permissions": {
+    "tools": [],
+    "filesystem": "write-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "derived://v3/frontend-http-contract",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:4d28348fbe2c8c57e0561a9a5e433dae024c843e712e9857bc507ea5d79ed612",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-api-contract",
+      "frontend-golden-task"
+    ],
+    "minimum_success_rate": 0.9,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:4d28348fbe2c8c57e0561a9a5e433dae024c843e712e9857bc507ea5d79ed612",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:49cd73246e6123ee14b3fe2576b217f53110c26dc84a9650dfe672068a0d0696",
+        "byte_length": 955
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:cf20de1ec8eee12036745c76626121d3934f1b62efb058ab9439612a4193b935",
+        "byte_length": 391
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:8c9a8ebce5bd1f83453527d3abd465ebcc04daaddcc62856cb766d781e043172",
+        "byte_length": 465
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:6489409bc9cc8de8c9038ca7f1f7ba41db5d07188f9250a3c9bfaa6920ddde36",
+        "byte_length": 584
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:ac603e754cce0cc82fcb19cd5d467a31e1234befe4f4dc7413bdb21671fa180b",
+        "byte_length": 611
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:3186ed2ad8982b9cb5f24dcaebe6b16be67e7469f75133107a5b245acfefdf92",
+        "byte_length": 239
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:962124d432744bf5aedf4ff8212d058ee8d27b34a9bef40cea640c8b3a199e2f",
+        "byte_length": 3456
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:45ed12e8996691ff1ef779be286a6e5ba8bb26c21367d1691d50b2fca31034b4",
+        "byte_length": 3467
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:1b8f44217a45eb769fdfad5632652a522c3e4e8e2cf8aa2313fb0b481b8c6d9d",
+        "byte_length": 682
+      }
+    ]
+  }
+}

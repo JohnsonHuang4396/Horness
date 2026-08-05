@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "policy-gate-authoring",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Implement and validate deterministic policy, approval, risk, quality-gate, evidence-freshness, and bypass-prevention rules for an Agent Harness. Use while building security and assurance controls that must remain effective even when the model or a skill behaves incorrectly.",
+  "entrypoint": "skills/build-time/policy-gate-authoring/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Implement and validate deterministic policy, approval, risk, quality-gate, evidence-freshness, and bypass-prevention rules for an Agent Harness. Use while building security and assurance controls that must remain effective even when the model or a skill behaves incorrectly."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-BUILDTIME-policy-gate-authoring.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:64d7b997bf4c307791a60ed3ca79ba46f2898a81894df053b892152948225d2a",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:64d7b997bf4c307791a60ed3ca79ba46f2898a81894df053b892152948225d2a",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:10b08e118502598017150ae6b13a588c5fc9b3ef272764f52b0c01e0a5b186e3",
+        "byte_length": 954
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:611c8293e38e6ecbd003fdc0df94e525a1d36c3a91267b4a9d5de8f1c9015cd3",
+        "byte_length": 389
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:4d1d85a704000597e6eab3552dfb67987d1fdab57bbe7e319f36033191257970",
+        "byte_length": 463
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:24475d958dc79dd7630d3c775de25bd3141a0d7233cbe946414ac0233a7c1d3c",
+        "byte_length": 582
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:378e6dc2f3eac7d93c8f5be663947486bf825766fe234b7c8fa5500104ffd58d",
+        "byte_length": 609
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:1d99f52301a8e35a0355d541e9ddd5467621acb755afd6838bbaccbce22b1c3a",
+        "byte_length": 238
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:60bbbb65b1dbbe7eb7c2a4a41e7ee86f94cb827e04c094ccfd479b42b82753a6",
+        "byte_length": 3562
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:b7409dd9c528f72d18550e7cbbdca6e613d6cb28d3dea52a7c2255fa0b8c7f4b",
+        "byte_length": 3526
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:d8330201dffbd8b9447f5c1d1108470ae1d97712de6fb820149339139a9e7694",
+        "byte_length": 681
+      }
+    ]
+  }
+}

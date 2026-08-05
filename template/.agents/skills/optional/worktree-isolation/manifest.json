@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "worktree-isolation",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Plan and request an isolated Git worktree for large, risky, parallel, or multi-branch software tasks while preserving user changes and ensuring explicit branch, path, cleanup, and recovery controls. Use when workspace isolation materially reduces conflict or rollback risk.",
+  "entrypoint": "skills/optional/worktree-isolation/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Plan and request an isolated Git worktree for large, risky, parallel, or multi-branch software tasks while preserving user changes and ensuring explicit branch, path, cleanup, and recovery controls. Use when workspace isolation materially reduces conflict or rollback risk."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-OPTIONAL-worktree-isolation.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:5e519301bb93af4cca7ab20bcea7b81227f749a6931e7244d512876d79972618",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:5e519301bb93af4cca7ab20bcea7b81227f749a6931e7244d512876d79972618",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:8d6fa365c17ea56eb6085d2db8a1e66484a80215ca76cd2296545a6ae09c8015",
+        "byte_length": 951
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:d18222339e5fb28abab6d6a0b6a518d82adeb0936536df148daea130f874f3de",
+        "byte_length": 383
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:fabc4d6e433c499ccda88f2b9f53437421bfc3a204e733f1ff14d91e3dec6bd0",
+        "byte_length": 457
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:2cafd61f1c85259b020464b2a9bf4f457587ec7977755f2f134665401f7eade5",
+        "byte_length": 576
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:c0ea226a819e08c290b5795cfb6d3363fbba80b2a8392e5498d08d3aae4fc84b",
+        "byte_length": 603
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:7fa2e7511b77b187e62c9d7ba00edd06f20ab4c535708423bdcffbf09792dd86",
+        "byte_length": 235
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:352751133f1b29c9bdf898c3347d0c811abdcdf7a4c087ad9db1a4f74a5cf711",
+        "byte_length": 3553
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:638d83c2e671853630bdd58edacd75ebc3f97584349edaaa8ac1ee3612530628",
+        "byte_length": 3474
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:118b43fe71790107f77801ec9ade581671d80fc375dc27b53b8cf76a045ac324",
+        "byte_length": 678
+      }
+    ]
+  }
+}

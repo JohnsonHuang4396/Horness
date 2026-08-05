@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "runtime-adapter-authoring",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Build and contract-test an Agent Harness Runtime Adapter for Codex or another coding-agent runtime while keeping vendor-specific sessions, events, models, tools, cancellation, usage, and recovery details outside the Harness core. Use when adding or upgrading a runtime integration.",
+  "entrypoint": "skills/build-time/runtime-adapter-authoring/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Build and contract-test an Agent Harness Runtime Adapter for Codex or another coding-agent runtime while keeping vendor-specific sessions, events, models, tools, cancellation, usage, and recovery details outside the Harness core. Use when adding or upgrading a runtime integration."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-BUILDTIME-runtime-adapter-authoring.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:6407e150fcaebf25f2266869961cf7847f59ae5aef9db5025cbbe01b568a60c7",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:6407e150fcaebf25f2266869961cf7847f59ae5aef9db5025cbbe01b568a60c7",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:557b565c82e7fe4c67171790fe44f5896b02672fca7e17cfe0abaeb1ea6b5974",
+        "byte_length": 958
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:ab99239be6ad80b0da49649b0ccdfb59fea08f6cce5f77d543e5190a1b299cbd",
+        "byte_length": 397
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:785097db1cbd15d388b777d12cba9deed19051f0ee98e0be378ff078e11136f2",
+        "byte_length": 471
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:8b05bce654893b22e008da754acc649ddb7248d2a95efc53828772528a91b4d7",
+        "byte_length": 590
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:bcd4e69be713fb0ad52d703393a27396e8ba7bcebf0a90ef471749cd49b2cdb1",
+        "byte_length": 617
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:3a37aa76c64f669e3a9fe2651417c648caf4a809cd2f9c864010c15b624a4b09",
+        "byte_length": 242
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:5358e0059ec1898642cb098daba708843482d07ccbf1eb809069ed5ac49f3d0b",
+        "byte_length": 3573
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:34201031b4a0d87f74c397d1c2d1f36402cc8ede872aa814ee66e1936d719d7c",
+        "byte_length": 3589
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:3f9b0c02dadfb4a7f23fd51376bed23dbb6d3501ed7c3c9d308204fd67f3ee9a",
+        "byte_length": 685
+      }
+    ]
+  }
+}
