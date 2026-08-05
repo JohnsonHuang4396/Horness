@@ -1,15 +1,16 @@
 {
-  "name": "horness",
+  "name": "@johnsonhuang4396/horness",
   "version": "1.0.0",
-  "description": "Agent Harness 通用模板 CLI（Node 24 原生 TS，zod 校验）",
+  "description": "CLI for Agent Harness.",
   "bin": {
     "horness": "./dist/horness.mjs"
   },
-  "type": "module",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -22,11 +23,6 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp"
   },
-  "bumpp": {
-    "commit": "chore: release v%s",
-    "tag": "v%s",
-    "push": true
-  },
   "dependencies": {
     "consola": "^3.4.2",
     "zod": "^4.4.3"
@@ -34,6 +30,7 @@
   "devDependencies": {
     "@types/node": "^26.1.2",
     "bumpp": "^12.1.1",
+    "conventional-changelog-cli": "^5.0.0",
     "oxfmt": "^0.62.0",
     "tsdown": "^0.22.14",
     "typescript": "^7.0.2"
@@ -41,5 +38,10 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@11.20.0"
+  "packageManager": "pnpm@11.20.0",
+  "bumpp": {
+    "commit": "chore: release v%s",
+    "tag": "v%s",
+    "push": true
+  }
 }

@@ -1,20 +1,29 @@
 name: publish
 
 # 触发：bumpp 推送 v* tag（本地 `pnpm release`）或手动触发
+# 流程：生成/更新 CHANGELOG.md 并提交回 master → 构建 → 发布到 npm
 on:
   push:
     tags:
       - 'v*'
   workflow_dispatch:
 
+permissions:
+  contents: write # 用于把生成的 CHANGELOG.md 提交回 master
+  id-token: write # 用于 npm provenance（可选，需 npmjs 侧开启）
+
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write # 用于 npm provenance（可选，需 npmjs 侧开启）
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 需要完整 git 历史以生成 changelog
+
+      # tag 与 master 指向 bumpp 推送的同一 commit；切到分支以便提交 changelog 回 master
+      - name: Switch to master
+        run: git checkout master
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -39,6 +48,17 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      # 从上一个 tag 到 HEAD 的 conventional commit 生成/更新 CHANGELOG.md
+      - name: Generate CHANGELOG
+        run: npx conventional-changelog-cli -p angular -i CHANGELOG.md -s
+
+      - name: Commit CHANGELOG back to master
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: CHANGELOG.md
+          commit_message: "docs(changelog): update for ${{ github.ref_name }}"
+          branch: master
 
       - name: Publish to npm
         uses: JS-DevTools/npm-publish@v3
