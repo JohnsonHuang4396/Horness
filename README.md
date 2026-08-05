@@ -21,12 +21,12 @@ horness 把 Agent Harness 的治理纪律——**P0→P10 阶段流水线、8 �
 ## 安装
 
 ```bash
-pnpm add -D @johnsonhuang4396/horness
-# 或全局安装
-pnpm add -g @johnsonhuang4396/horness
+npm install -g @johnsonhuang4396/horness
+# 或作为项目开发依赖
+npm install -D @johnsonhuang4396/horness
 ```
 
-> 需要 Node.js ≥ 24。
+> 需要 Node.js ≥ 18（建议使用 ≥ 20 的 LTS 版本）。无需安装 pnpm —— `packageManager` 字段只描述本仓库自身的维护工具，不约束使用者。
 
 ## 快速上手
 
@@ -118,21 +118,22 @@ gitignore 规则            # .harness 运行时忽略规则（合并进目标 .
 
 ```bash
 git clone <repo> && cd horness
-pnpm install         # 安装依赖
-pnpm build           # tsdown 打包到 dist/horness.mjs（自包含单文件）
-pnpm test            # 运行测试（node --test）
-pnpm typecheck       # tsc --noEmit 类型检查
+npm install          # 安装依赖
+npm run build        # 打包到 dist/horness.mjs（自包含单文件）
+npm test             # 运行测试（node --test）
+npm run typecheck    # tsc --noEmit 类型检查
 ```
 
 本地直接用全局命令测试：
 
 ```bash
-pnpm setup           # 首次：配置 PNPM_HOME（写入 shell，重启终端生效）
-pnpm link --global   # 全局注册 `horness` 命令
+npm link             # 全局注册 `horness` 命令
 horness init --name Demo   # 之后任何目录直接可用
 ```
 
-> `pnpm build` 后全局命令即反映最新版本（bin 指向 `dist/horness.mjs`）。
+> `npm run build` 后全局命令即反映最新版本（bin 指向 `dist/horness.mjs`）。
+>
+> 仓库本身以 pnpm 维护（`packageManager` 字段），维护者用 `pnpm` 亦可，功能等价；`pnpm setup` + `pnpm link --global` 是 pnpm 的等效本地链接方式。
 
 ## 注意事项
 

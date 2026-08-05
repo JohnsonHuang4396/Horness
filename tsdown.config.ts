@@ -9,7 +9,7 @@ export default defineConfig({
   outDir: 'dist',
   format: ['esm'],
   platform: 'node',
-  target: 'node24',
+  target: 'node18',
   clean: true,
   // 默认会 externalize dependencies；alwaysBundle 用正则覆盖 consola 全部子路径（./utils 等），
   // 把 zod/consola 全打进单文件，产物自包含。

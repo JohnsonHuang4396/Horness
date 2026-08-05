@@ -21,12 +21,12 @@ horness distills the governance discipline of Agent Harness — **the P0→P10 p
 ## Installation
 
 ```bash
-pnpm add -D @johnsonhuang4396/horness
-# or install globally
-pnpm add -g @johnsonhuang4396/horness
+npm install -g @johnsonhuang4396/horness
+# or as a project dev dependency
+npm install -D @johnsonhuang4396/horness
 ```
 
-> Requires Node.js ≥ 24.
+> Requires Node.js ≥ 18 (an LTS ≥ 20 is recommended). No need to install pnpm — the `packageManager` field only describes this repo's own maintenance tool; it does not constrain consumers.
 
 ## Quick start
 
@@ -118,21 +118,22 @@ Build from source and test locally:
 
 ```bash
 git clone <repo> && cd horness
-pnpm install         # install dependencies
-pnpm build           # tsdown bundle to dist/horness.mjs (self-contained single file)
-pnpm test            # run tests (node --test)
-pnpm typecheck       # tsc --noEmit type check
+npm install          # install dependencies
+npm run build        # bundle to dist/horness.mjs (self-contained single file)
+npm test             # run tests (node --test)
+npm run typecheck    # tsc --noEmit type check
 ```
 
 Test the global command locally:
 
 ```bash
-pnpm setup           # first time: configure PNPM_HOME (writes to shell; restart to take effect)
-pnpm link --global   # register the `horness` command globally
+npm link             # register the `horness` command globally
 horness init --name Demo   # usable in any directory from here on
 ```
 
-> After `pnpm build` the global command reflects the latest version (bin points to `dist/horness.mjs`).
+> After `npm run build` the global command reflects the latest version (bin points to `dist/horness.mjs`).
+>
+> The repo itself is maintained with pnpm (the `packageManager` field); maintainers can use `pnpm` equivalently — `pnpm setup` + `pnpm link --global` is pnpm's equivalent local-link flow.
 
 ## Notes
 

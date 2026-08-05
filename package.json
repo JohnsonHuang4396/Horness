@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "tsdown",
-    "init": "node bin/horness.ts init",
+    "init": "node dist/horness.mjs init",
     "test": "node --test src/*.test.ts bin/*.test.ts",
     "typecheck": "tsc --noEmit",
     "version": "pnpm build",
@@ -37,7 +37,7 @@
     "typescript": "^7.0.2"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=18"
   },
   "packageManager": "pnpm@11.20.0",
   "bumpp": {
