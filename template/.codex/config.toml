@@ -12,7 +12,8 @@ agents.enabled = true
 project_doc_fallback_filenames = ["CLAUDE.md"]
 
 # Harness 需要写证据账本与阶段产物，默认授予工作区写权限。
-default_permissions = ":workspace-write"
+# 内置 profile 为 :workspace（写工作区）与 :read-only；:workspace-write 不是合法 profile。
+default_permissions = ":workspace"
 
 # 执行策略：松紧控制见 rules/harness.rules（Starlark）。
 # 默认仅放行 harness 脚本与 git/只读；危险路径(删除/sudo/网络)收紧。
