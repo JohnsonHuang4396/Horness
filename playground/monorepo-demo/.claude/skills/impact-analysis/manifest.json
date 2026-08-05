@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "impact-analysis",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Trace the full impact of a requested software change across symbols, packages, APIs, schemas, configuration, messages, reflection strings, resources, scripts, tests, documentation, and deployment. Use for features, bug fixes with uncertain reach, compatibility work, migrations, and any task where missed references could cause regressions.",
+  "entrypoint": "skills/core/impact-analysis/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Trace the full impact of a requested software change across symbols, packages, APIs, schemas, configuration, messages, reflection strings, resources, scripts, tests, documentation, and deployment. Use for features, bug fixes with uncertain reach, compatibility work, migrations, and any task where missed references could cause regressions."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-impact-analysis.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:2e8ab0194766526477944f84feace6b5c585014db25a596a4268a44edd7467c2",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract",
+      "source-enhanced-catalog"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:2e8ab0194766526477944f84feace6b5c585014db25a596a4268a44edd7467c2",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:6bf439f5a43f4af33d5464665db72db7ca25bea21ce8ddfd6365be2feab302ad",
+        "byte_length": 948
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:ecfda10f07479c415ceaf37e92a96fd77ab5519dca5c593b35105d23894dd33e",
+        "byte_length": 377
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:882aae91f7204a066ed5002cf322971cc3a80c8bd946f411172d2e6ae30c4b1c",
+        "byte_length": 451
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:5ad0eb6d25d4e677802f27ac30927bb6e3a87c2cc037155d36da72fca95648ce",
+        "byte_length": 570
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:ddb273531b27359993e638077acdf7f45094711dbbae94e4d4c87664e78835a2",
+        "byte_length": 597
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:b03dc88f067e49edd4ded06224bfa315df3db02894ce3749f2e854a6af8f8be6",
+        "byte_length": 232
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:b2dda76379555dd173747f22b507e1641816ecc5742bec102438f75b03ea026b",
+        "byte_length": 3617
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:63618a7c250d422d9093de6dcd2c8a28ad47221dc8ffcfe20e29caa619905466",
+        "byte_length": 3811
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:d0165cc997408d180e05ef653b453b282ad172ceb2b416f111421f0c89e534cc",
+        "byte_length": 675
+      }
+    ]
+  }
+}

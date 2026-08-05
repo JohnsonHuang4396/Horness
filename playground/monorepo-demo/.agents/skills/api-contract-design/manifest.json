@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "id": "api-contract-design",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "设计和演进 HTTP、事件、消息和函数 API 契约，覆盖输入输出、错误、鉴权、幂等、分页、版本兼容、观测和迁移。",
+  "entrypoint": "skills/core/api-contract-design/SKILL.md",
+  "scope": "core",
+  "stages": [
+    "P1",
+    "P2",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "migration",
+    "debug",
+    "release"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "API 设计",
+      "接口契约",
+      "OpenAPI",
+      "事件 schema",
+      "消息格式",
+      "错误码"
+    ],
+    "negative": [
+      "没有来源时不要编造接口字段或权限"
+    ]
+  },
+  "dependencies": [
+    "requirement-analysis",
+    "impact-analysis",
+    "solution-design"
+  ],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://core/api-contract-design",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:234b9fb2a5ce5fde341241b0f2e3e5e08cffd18c8cf876eec5da94ec1d5b25ff",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "api-contract-review"
+    ],
+    "minimum_success_rate": 0.9,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:234b9fb2a5ce5fde341241b0f2e3e5e08cffd18c8cf876eec5da94ec1d5b25ff",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:0668eb3d7b74248be19ef57d062604f7e8aa928c0fe7ee08ae280fb192878043",
+        "byte_length": 952
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:3de856e439638050719ac362cd1a08fb87659292c0477d684a9aa6793d2891a6",
+        "byte_length": 385
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:4f0ec0e41655532ae82a24646dc892cb72f1040c98982be87c820f1ade5ecc80",
+        "byte_length": 459
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:da328053da5cba57b10bb0d9e242e7da235b10f3677f21a9879bda79a8f89fed",
+        "byte_length": 578
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:55f22a133e432085d1407b4a208c92a220c693a027a6feb9d6a98fe4c37d84c6",
+        "byte_length": 605
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:5e5f27a951de3212fefc2a15b7dade197d1def82ae6419cb86259cd7629bb416",
+        "byte_length": 236
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:5be5ced7a42f85edba165e91dc40964132d68d4fe719498966515b5e56ebc83b",
+        "byte_length": 3432
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:ae49d60509ed7095045bb90ea116ec4f18f8ee6c6d894e33df5eb2b7b502b8ae",
+        "byte_length": 3548
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:209bd427a09206b1ec4a474393f326876bd44aaf076a582ae45346de6faa7465",
+        "byte_length": 679
+      }
+    ]
+  }
+}

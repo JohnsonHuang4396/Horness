@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "id": "node-backend-engineering",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "在已确认 Node、TypeScript、NestJS、Express 或 Fastify 项目中维护 API、任务、依赖和运行时兼容，不混用 Harness 自身运行时。",
+  "entrypoint": "skills/stack/backend-node/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "node-backend-engineering"
+    ],
+    "negative": [
+      "没有项目证据时不加载 node-backend-engineering"
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://stack/node-backend-engineering",
+    "license": "UNKNOWN - review required before redistribution",
+    "content_hash": "sha256:01b7ad8d1d686c44abe1872c7fcc6dfe509ba4929bf21a52ec64eb21169d2837",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-bundle-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 11,
+    "content_hash": "sha256:01b7ad8d1d686c44abe1872c7fcc6dfe509ba4929bf21a52ec64eb21169d2837",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:0b8cfd67135b85b5d754565f9a698b10a30fdb4aae414c1c2b7b69b17b5319dc",
+        "byte_length": 945
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:9eb4a926358c2780dd43893fc8f16407895cae7e36163cc2887a7f203b90a150",
+        "byte_length": 371
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:501de1e2f5753af366b5a5937776f470e9c3cebb10fbcaec8b6033c3befb6990",
+        "byte_length": 445
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:1db0d11251fd88200d5edeb8585c9b84bd0ed938dcc2f3995105ab326d1b18d6",
+        "byte_length": 564
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:a8481bc0a3bb5a39c55baf29c9d485b0a9e6900b98b13d441b6e6284f0fd37dc",
+        "byte_length": 591
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:9a9c59db5e74f1c85bf8b220d25a8c6fd44c81d436d52931816747c380a0dbd9",
+        "byte_length": 229
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:830a3a2b671e8237d884446ee75e7ff5243020de25c85f9543e03da1e366647e",
+        "byte_length": 3430
+      },
+      {
+        "path": "references/stack-pack.md",
+        "kind": "reference",
+        "content_hash": "sha256:9859f4f4ef65e4b0ba6f3088ba14409ef878a0bc3bdca59c21d5742b7ad71f26",
+        "byte_length": 3522
+      },
+      {
+        "path": "references/verification.md",
+        "kind": "reference",
+        "content_hash": "sha256:12850ef2bab0be8a511e910894021e822b24c5768f77bcd6dfd82d892782016c",
+        "byte_length": 95
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:6ec9d59dcdf1dfcf01e67d27aea343fe47a09aa6597eacef8b3e5744f943bee3",
+        "byte_length": 1262
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:36eca494c8c1dd51235d16d71312a2fbd54d5c4caa0c170ca76afb82b2d9594d",
+        "byte_length": 672
+      }
+    ]
+  }
+}

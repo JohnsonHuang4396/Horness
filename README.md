@@ -12,6 +12,7 @@ horness 把 Agent Harness 的治理纪律——**P0→P10 阶段流水线、8 �
 ## 特性
 
 - **一条命令接入**：`horness init` 自动探测技术栈，生成完整的治理脚手架。
+- **monorepo / 多项目识别**：自动识别 pnpm/yarn/npm workspaces、lerna、nx、turbo；无 workspace 标记的多项目目录（backend×N + frontend×N）同样逐子项目探测技术栈并写入配置。
 - **四 agent 同构**：同一治理语义为 Claude Code / Codex / OpenCode / Pi 各生成对应语法的配置与角色。
 - **单一技能来源**：`.agents/skills/` 技能中心一份，所有 agent 共享；Claude 自动镜像。
 - **证据账本**：每次文件编辑 / 工具调用自动写入证据链，阶段产物留痕可审计。
@@ -120,7 +121,7 @@ gitignore 规则            # .harness 运行时忽略规则（合并进目标 .
 git clone <repo> && cd horness
 npm install          # 安装依赖
 npm run build        # 打包到 dist/horness.mjs（自包含单文件）
-npm test             # 运行测试（node --test）
+npm test             # 运行测试（vitest，tests/ 目录）
 npm run typecheck    # tsc --noEmit 类型检查
 ```
 

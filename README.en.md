@@ -12,6 +12,7 @@ horness distills the governance discipline of Agent Harness — **the P0→P10 p
 ## Features
 
 - **One-command setup**: `horness init` auto-detects your stack and generates a complete governance scaffold.
+- **Monorepo / multi-project aware**: auto-detects pnpm/yarn/npm workspaces, lerna, nx, turbo; multi-project dirs without workspace markers (backend×N + frontend×N) are likewise probed per sub-project and recorded in the config.
 - **Four agents, one standard**: the same governance semantics are emitted in each agent's native syntax for Claude Code / Codex / OpenCode / Pi.
 - **Single source of skills**: the `.agents/skills/` hub is shared by all agents; Claude gets an automatic mirror.
 - **Evidence ledger**: every file edit / tool call is appended to the evidence chain, leaving auditable stage artifacts.
@@ -120,7 +121,7 @@ Build from source and test locally:
 git clone <repo> && cd horness
 npm install          # install dependencies
 npm run build        # bundle to dist/horness.mjs (self-contained single file)
-npm test             # run tests (node --test)
+npm test             # run tests (vitest, tests/ directory)
 npm run typecheck    # tsc --noEmit type check
 ```
 

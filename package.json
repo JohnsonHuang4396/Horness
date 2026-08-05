@@ -18,7 +18,7 @@
   "scripts": {
     "build": "tsdown",
     "init": "node dist/horness.mjs init",
-    "test": "node --test src/*.test.ts bin/*.test.ts",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "version": "pnpm build",
     "prepublishOnly": "pnpm build",
@@ -34,7 +34,8 @@
     "conventional-changelog-cli": "^5.0.0",
     "oxfmt": "^0.62.0",
     "tsdown": "^0.22.14",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
   },
   "engines": {
     "node": ">=18"

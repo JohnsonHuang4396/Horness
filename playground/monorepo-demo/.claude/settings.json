@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "FileChanged": [
+      {
+        "matcher": "**/*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".harness/scripts/hook-file-change.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(.harness/scripts/evidence.sh *)",
+      "Bash(.harness/scripts/hook-file-change.sh *)"
+    ]
+  }
+}

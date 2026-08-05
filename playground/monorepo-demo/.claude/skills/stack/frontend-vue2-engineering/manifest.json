@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-vue2-engineering",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "Vue 2 项目的组件、路由、状态、请求和兼容开发能力，防止 Vue 3 写法、依赖升级和项目约定漂移。",
+  "entrypoint": "skills/stack/frontend-vue2-engineering/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug",
+    "migration"
+  ],
+  "assurance_modes": [
+    "fast",
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "Vue 2",
+      "vue@2",
+      "Options API",
+      "Vuex",
+      "旧版前端"
+    ],
+    "negative": [
+      "项目已确认 Vue 3",
+      "不要升级 Node 或框架"
+    ]
+  },
+  "dependencies": [
+    "frontend-coding",
+    "frontend-code-review"
+  ],
+  "conflicts": [
+    "frontend-vue3-engineering"
+  ],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "write-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://stack/vue2",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:45a69262b07d4442286987bca084d4935bcaf400de0125ea756605aa2175bb21",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-stack-contract",
+      "frontend-golden-task"
+    ],
+    "minimum_success_rate": 0.9,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:45a69262b07d4442286987bca084d4935bcaf400de0125ea756605aa2175bb21",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:31912ec0b309814a32aef2458bc645e4263af715cb3267ea069fa25c14a25cc5",
+        "byte_length": 958
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:40408e48c874e8bc42adb86d00105a10f8a4f84ad1a0250a44ddc11c31dcc502",
+        "byte_length": 397
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:37dca9b1e1e8ba22954011cfb1f5103184478a63f44df28b57b750420dd3fe85",
+        "byte_length": 471
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:672cbc1b234b4e31130436795d7f405786673452041a5cbad28bdcccb223c698",
+        "byte_length": 590
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:6ebcf8c2feb4d1a59ebe019d200c875b3f43727201f02cc2a41a1342d3117e6f",
+        "byte_length": 617
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:2243748f5a54238774ea09743b02cb7d62a682dec4919892e2b870987657e56b",
+        "byte_length": 242
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:76063b868ddeac9285b120dca344bb2abee45bc67c836ea6c9cd26422b8be236",
+        "byte_length": 3420
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:59e0d857692bb5e5067a434d0973eb38082c8ebc850b23dbd2d48f8d2a93c855",
+        "byte_length": 3491
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:70f8022db2df4dd9a4dc1df4f2f3a2be38f34c475c6f0088ad4a4c35a45e0287",
+        "byte_length": 685
+      }
+    ]
+  }
+}

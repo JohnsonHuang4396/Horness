@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "skill-authoring",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Create, revise, validate, and forward-test portable Agent Skills with concise trigger metadata, procedural instructions, optional references or scripts, minimal permissions, and measurable value. Use when a repeated reasoning workflow should become a governed skill rather than a rule, knowledge file, deterministic tool, or Harness core feature.",
+  "entrypoint": "skills/optional/skill-authoring/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Create, revise, validate, and forward-test portable Agent Skills with concise trigger metadata, procedural instructions, optional references or scripts, minimal permissions, and measurable value. Use when a repeated reasoning workflow should become a governed skill rather than a rule, knowledge file, deterministic tool, or Harness core feature."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-OPTIONAL-skill-authoring.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:386aaa3aa552ae1ceab6ba8f012f31e4a46849f5f49f8382e234b4c5cb2079d1",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract",
+      "source-enhanced-catalog"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:386aaa3aa552ae1ceab6ba8f012f31e4a46849f5f49f8382e234b4c5cb2079d1",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:c693d8344bdf752c1788f0effe015b1b7966ca8fe49e392adcf29cf0e46bf5b9",
+        "byte_length": 948
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:a588943ef29f9dcebd9442a7e1f4edf83974bc284e7a1db04488a17f6fc7a338",
+        "byte_length": 377
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:24fbd388d47ee5d16ad0c92756b9bda7a8cd15ea2d2f6b61b04278037db3b97b",
+        "byte_length": 451
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:c2f12ea41bef30139052c41105e8b95dd2e208b42d29051fb3380a72591a2e91",
+        "byte_length": 570
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:f6490aef4e62bdfc7311d7427b43122f89d948f308b01c7ebbf1c347e965b9b8",
+        "byte_length": 597
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:298d76ea25bf201eca14ad45b64fc2f8fe1cbff3a16975bb74c118473329d00e",
+        "byte_length": 232
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:5c1800cf292ada80ec43072c4b97ebbdb42403c4425c864804802ff4b11c66e6",
+        "byte_length": 3623
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e82e49bc275c88fefc2bb14f86b6846b3fe9420354c597a77ac3cb18d6958f59",
+        "byte_length": 3845
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:5b506c960e155ed67ba6fdae323e1616ff690dd93796599c6074ffcacc87dfba",
+        "byte_length": 675
+      }
+    ]
+  }
+}

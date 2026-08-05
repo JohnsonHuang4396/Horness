@@ -1,0 +1,9 @@
+# Harness 运行时证据账本（保留 .harness/scripts 与 .harness/README 与 .harness/config.json）
+.harness/host-sessions/
+.harness/generated/
+.harness/packs/
+.harness/current-session
+.harness/migrations/
+
+# 初始化备份（init 覆盖冲突时产生的备份）
+.harness.backup-*/

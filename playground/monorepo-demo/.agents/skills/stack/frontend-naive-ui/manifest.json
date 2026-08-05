@@ -1,0 +1,801 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-naive-ui",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "Naive UI 与 Vue 3 项目的表单、表格、弹窗、反馈、选择器、上传、主题和类型工程能力。",
+  "entrypoint": "skills/stack/frontend-naive-ui/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "Naive UI",
+      "naive-ui",
+      "NForm",
+      "NDataTable",
+      "NModal",
+      "NMessage"
+    ],
+    "negative": [
+      "没有 naive-ui 证据时不引入该库"
+    ]
+  },
+  "dependencies": [
+    "frontend-vue3-engineering",
+    "frontend-ui-component-engineering"
+  ],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "write-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://stack/naive-ui",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:ad7ccecfd3220bf8cad10ff55c6831f0832635491abc59d9575f535f72c50fa6",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-ui-contract",
+      "frontend-golden-task"
+    ],
+    "minimum_success_rate": 0.9,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 120,
+    "content_hash": "sha256:ad7ccecfd3220bf8cad10ff55c6831f0832635491abc59d9575f535f72c50fa6",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:d000bd9a5089658cc17dc35932c4e9cedd99e3258099c10b46f9203d817be78f",
+        "byte_length": 950
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:88ff701888a19367647987baa2a4672eb4ae43cd6c38c93d1eb51b132115a716",
+        "byte_length": 381
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:5d39735d414328d56dfa20e29c386b40ee70f7996e3d9f617447aee9e82d84a3",
+        "byte_length": 455
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:7ef9f7ad801f576e59d0a0d077f9da2801ec28186cd479172feddf9a82fd33b3",
+        "byte_length": 574
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:b157d4bf57233dcb88a3ac23085d9949068323b0d81d4d20750de7c3d6cceac8",
+        "byte_length": 601
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:8c0f54d8fc76283e16c2a5cfa6ff33192448c5742108cbe092d4d4db3eb0cb0a",
+        "byte_length": 234
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:9a36748438e46c3d55998e7fceaaa6c71e0e314ecf548d4da600cd2a9b2e5569",
+        "byte_length": 3397
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:883cc4424d34028f57a0fa6d9b224d2580f01fb0891e6fbe595566d7dbf00e22",
+        "byte_length": 3514
+      },
+      {
+        "path": "source/AGENTS.md",
+        "kind": "supporting",
+        "content_hash": "sha256:c1341283ede9f47fa3fb6857050cabecc91e8d15b0582c1abe3626e3cd6f9acc",
+        "byte_length": 62628
+      },
+      {
+        "path": "source/components/n-affix/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:5dbe7c0297a64de06475653059ebf3317117b450cf428acedc9d6ec0714d1847",
+        "byte_length": 5194
+      },
+      {
+        "path": "source/components/n-alert/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:be6f6b1b98ea36c3929876584dea0b8684930a2f50e6273890c3286b24cc5b86",
+        "byte_length": 5789
+      },
+      {
+        "path": "source/components/n-anchor/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:bd01e423a83fbdd6984ab0f76b3a64e905d5bc3983c03a82d393b9374b547667",
+        "byte_length": 6213
+      },
+      {
+        "path": "source/components/n-auto-complete/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7156ba215983ada74c14778b9ac8225db8724ed40d8b73ce2100f734e31a8549",
+        "byte_length": 9685
+      },
+      {
+        "path": "source/components/n-avatar/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7edafe7d4d429c444aace08e381926f4b5fdbcdb830e7d47435e150cbc64a532",
+        "byte_length": 9434
+      },
+      {
+        "path": "source/components/n-back-top/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:4707afa95da82d5cb61dc5401ae7aba4dc644bb42ccf01ab5da2cbe4106012f1",
+        "byte_length": 4881
+      },
+      {
+        "path": "source/components/n-badge/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:10182436ff2b9970fcf7dcf1c2c8599a2432ecf2ee40645821038683409df4af",
+        "byte_length": 7376
+      },
+      {
+        "path": "source/components/n-breadcrumb/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:dcf06fa87aab89398977c0e64b6861920410d50f2950d6ca1ab2ae593be66964",
+        "byte_length": 5618
+      },
+      {
+        "path": "source/components/n-button/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:a8dbffdf8ff767977882175c2ba0e5566ee8af778504ee72eb62f783162f4988",
+        "byte_length": 11659
+      },
+      {
+        "path": "source/components/n-calendar/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7a84cddc5ee5ac79a392267f4942c01fa1ff333f966a18d8321f195d353eab62",
+        "byte_length": 6394
+      },
+      {
+        "path": "source/components/n-card/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:c3ae375f0fbba7793f3de959b7fb854590636fede37151833583842e905beb4d",
+        "byte_length": 9876
+      },
+      {
+        "path": "source/components/n-carousel/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:8aad9ba90d178b55462b0b814a6a124945ebbd8330f568db14e8bec2c4d860cb",
+        "byte_length": 9589
+      },
+      {
+        "path": "source/components/n-cascader/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e8d5c42aa96e382e80b2afcbdb93b24360fd0c396f61b9445a406363fa26df08",
+        "byte_length": 11014
+      },
+      {
+        "path": "source/components/n-checkbox/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:c0930fd7cc45afab04c753bee714292239fcc357e517bf5cf54392df9532397f",
+        "byte_length": 9397
+      },
+      {
+        "path": "source/components/n-code/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:fc73331060fddcd6a40fefd23ef4a683833943f3574ce52007f6452da3d7daf6",
+        "byte_length": 6907
+      },
+      {
+        "path": "source/components/n-collapse-transition/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7abee779be0bae14a3ef98523f399d686cc4a4022430ae19349c4175644df072",
+        "byte_length": 5232
+      },
+      {
+        "path": "source/components/n-collapse/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:88cb5472b084268615194496e058b0b89422206d8855ce62c37b95d08ffeaee4",
+        "byte_length": 9940
+      },
+      {
+        "path": "source/components/n-color-picker/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:bf49015bc769b965abcfd26c86b6e07ee001ac4ae2903f8c68cfbf1842b334b6",
+        "byte_length": 6949
+      },
+      {
+        "path": "source/components/n-config-provider/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:20441cf4f6b854e4884ff71891275a91296bd471b0f5c182e3e94a4047de278d",
+        "byte_length": 11458
+      },
+      {
+        "path": "source/components/n-countdown/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:2c784507326e3693f1c2c57255f0aa2c7ce006feabd373a5d553309737485519",
+        "byte_length": 8622
+      },
+      {
+        "path": "source/components/n-data-table/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e0f74b8e3fd94a8c95f5d76df42c0d5f994f52b308287e2f0d4a79ddde144858",
+        "byte_length": 18601
+      },
+      {
+        "path": "source/components/n-date-picker/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7ef49d5b9ebc7ada5852ea1bf446b8012c2cb9b8a83c18007c523b21ceaac3f6",
+        "byte_length": 10938
+      },
+      {
+        "path": "source/components/n-descriptions/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7e2f046857c04fcbe789aa60b81b4476a796f0432f4885bb002a6099ffe78aef",
+        "byte_length": 10591
+      },
+      {
+        "path": "source/components/n-dialog/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e38c238010e922a4cbd7f60f0f5dd37c736836d79f8c93ce16932dfcc03096cd",
+        "byte_length": 11030
+      },
+      {
+        "path": "source/components/n-discrete/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:ac843a59a37daa6e51e13181f183c68b7c5af67927d2ad02cf29d69fed57beb0",
+        "byte_length": 6285
+      },
+      {
+        "path": "source/components/n-divider/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:5411418be1324e2f861421c836ee340ff79d79cd79b605bd4316314682c1817c",
+        "byte_length": 5095
+      },
+      {
+        "path": "source/components/n-drawer/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:12a4c6ad2be3ea04d4bcc143685dc3567bb3dddd4e2b63c5f00e3136266c685a",
+        "byte_length": 11789
+      },
+      {
+        "path": "source/components/n-dropdown/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e30c9777c1f9bef9cb9a8ba55ae17778ba24f3b58b7ac2a3dfcbe629f06fb75d",
+        "byte_length": 11502
+      },
+      {
+        "path": "source/components/n-dynamic-input/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:c3cbf8358f8d86eef559180777bcb4b6cbeb482855d04b6ce99665366ae47a66",
+        "byte_length": 7388
+      },
+      {
+        "path": "source/components/n-dynamic-tags/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:b0ef159416da0a3cd29ce6fc8ba7549c89a39047a3faccf64792ff699db5ce5f",
+        "byte_length": 6463
+      },
+      {
+        "path": "source/components/n-element/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7b36424d4258bf7e3844cd5ce3f62bfc50270c503a443917915e476313edc06f",
+        "byte_length": 8629
+      },
+      {
+        "path": "source/components/n-ellipsis/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:778983788a9ecce648d757639017e0df842e70cd5ecf96f52203409d67245c15",
+        "byte_length": 5774
+      },
+      {
+        "path": "source/components/n-empty/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:d72be90c33fc84216044139fe84d9944a8d981a1ca13f4bb04cb09d751d2e5cc",
+        "byte_length": 7997
+      },
+      {
+        "path": "source/components/n-equation/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:56254192a013aa30f5d1001848bbe0db2acc288a50fdc912494adb5b857d0536",
+        "byte_length": 5505
+      },
+      {
+        "path": "source/components/n-flex/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:c5638e1f40f6e6dc9977179fcaa3fe1b3f1e145b146cd08fa879750c2518ab6c",
+        "byte_length": 5258
+      },
+      {
+        "path": "source/components/n-float-button/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:90637447ae114b2b327fa9e542e06972c5c8dd6a0657cd6a35b47b812be3121f",
+        "byte_length": 9052
+      },
+      {
+        "path": "source/components/n-form/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:6b8a13ef69f63a459c42f171825e806664a4e1107e0d7ec52f79010458fec6ed",
+        "byte_length": 16713
+      },
+      {
+        "path": "source/components/n-global-style/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:229d9b82a9ed9f0f67e891840f355f9077c95dffb8d9b7686cadc75b44ff847c",
+        "byte_length": 7823
+      },
+      {
+        "path": "source/components/n-gradient-text/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:bb863681e7fd36201b4c29c971b207f72c85174505c61e3bf5d5906fa8e33f25",
+        "byte_length": 5308
+      },
+      {
+        "path": "source/components/n-grid/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:9e812d85bfbfac84bec853734333b8d4cde16399ccb27908371ece2021070c30",
+        "byte_length": 6659
+      },
+      {
+        "path": "source/components/n-heatmap/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:51d86ef291644d0bebd823d9915abb8717fb85bf07da7315225f94382afeefdb",
+        "byte_length": 7994
+      },
+      {
+        "path": "source/components/n-highlight/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:d473d2a0231d8053d9224523f21b390b17d894c709eb60e1890c746fa8ad439b",
+        "byte_length": 7298
+      },
+      {
+        "path": "source/components/n-icon/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:43d3de1aaa9c931dbf4c250f931e1d2d1c5a63264812bf8d9c40da46078bfa54",
+        "byte_length": 8382
+      },
+      {
+        "path": "source/components/n-image/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:603b0cd9016807e2f9385497cbace616f0028d9a6a61e444f3a894d38efc4050",
+        "byte_length": 11346
+      },
+      {
+        "path": "source/components/n-infinite-scroll/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:9045ed53b7179bc54418c90fa79c236258b495311d65a8e8a0477c6c2891cdc9",
+        "byte_length": 7459
+      },
+      {
+        "path": "source/components/n-input-number/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:446fedb2622114336ce67f884b83279d9bea7aae05f9868c52a783dbd5ea9f53",
+        "byte_length": 7313
+      },
+      {
+        "path": "source/components/n-input-otp/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:71271cf3af80fc884a8d471592a921fc77f70b078ab3deba1aee1c64000413ae",
+        "byte_length": 6815
+      },
+      {
+        "path": "source/components/n-input/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:8582470853b152377a2c069bf7c9036e25dfa2d9f881295a2525ecfd26ac4806",
+        "byte_length": 9285
+      },
+      {
+        "path": "source/components/n-layout/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:652e3f6304bfbc91b5c92db8a1bcfd072375d492e6d4a9a16666f5c2cc84e8ef",
+        "byte_length": 9762
+      },
+      {
+        "path": "source/components/n-legacy-grid/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e5df1aae5ebc209bf63db9962e2804e2913650b3a2db3ffa8d613bdf82a83e9e",
+        "byte_length": 4779
+      },
+      {
+        "path": "source/components/n-list/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:d8be9f4a818717e25051c46da286967f416324850391281ec3af23423bd966c3",
+        "byte_length": 9999
+      },
+      {
+        "path": "source/components/n-loading-bar/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:8002a5d1ce246c3de44206203b45803f94ae100404dba8da85a6601609cef7ce",
+        "byte_length": 5540
+      },
+      {
+        "path": "source/components/n-log/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7e0897cffb671babd3b808d0a95895a57aca4dbf49154970815a8f826d801bff",
+        "byte_length": 10866
+      },
+      {
+        "path": "source/components/n-marquee/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:2868152e2ef99efbe18f6ff1d88f52e506de77f5a6ec67e4b865dec62be6f04b",
+        "byte_length": 10626
+      },
+      {
+        "path": "source/components/n-mention/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:5b67eec76fe4059c6d21ef123b7d0facaf368a76454abfa7e6a5e6facebd57e3",
+        "byte_length": 8146
+      },
+      {
+        "path": "source/components/n-menu/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e08cfcad47095d1bcdb399c4542368cd4a0ceb233fb1c1dc7357978887d7ea2b",
+        "byte_length": 8537
+      },
+      {
+        "path": "source/components/n-message/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:b08bfeaa0cc234448ebaf449e16a473bb5433ade44f85f47f886506f0781e66c",
+        "byte_length": 11725
+      },
+      {
+        "path": "source/components/n-modal/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:ad65ce0ff78b6c7f83b0cbb96085da10cd4f3d84f5a03f0d81d70a9e1bc724ed",
+        "byte_length": 6881
+      },
+      {
+        "path": "source/components/n-notification/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:22a5bf11c5e6604e14dd8c2e5d7ed4c0525847ccd34e6a6bdb1a581a81bbe788",
+        "byte_length": 8178
+      },
+      {
+        "path": "source/components/n-number-animation/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:6cbbb91775f6fb2775bc015541a433718477815cc34a9a1bf50ce92ad31bb813",
+        "byte_length": 10790
+      },
+      {
+        "path": "source/components/n-page-header/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:c4c1c2171b590ae50e8f1df68902ea82dfbf1cb4aeed7b923253c1acd5fc8d39",
+        "byte_length": 6807
+      },
+      {
+        "path": "source/components/n-pagination/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:449f73df168e3cd3ee3e48fafe5603c6de1d7af4371d7fb770608faa40d4c8ab",
+        "byte_length": 7348
+      },
+      {
+        "path": "source/components/n-popconfirm/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:2f6d0066eeca92f8a9a3282a0e6150ba703d03bb2a268cc6df56d4da6c863ca5",
+        "byte_length": 6549
+      },
+      {
+        "path": "source/components/n-popover/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:66086e2bd0b32f938c556c6fe0adfeb85b2f1d9e22d3b780ad21330adce42479",
+        "byte_length": 8898
+      },
+      {
+        "path": "source/components/n-popselect/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:5335d4a4ef26ff2fa6718b8eb9e65429e55d331e0f6a06fe2bd477be8ea74048",
+        "byte_length": 13257
+      },
+      {
+        "path": "source/components/n-progress/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:b16d5c72dd317fc8e15cce4d6f639706823c811d69c5f64f96a9420d5c3cdf25",
+        "byte_length": 7791
+      },
+      {
+        "path": "source/components/n-qr-code/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:a0eed2b58dbb6e4b03a06d57e91c063e32460e6531894bb515e11a0e6911937a",
+        "byte_length": 7718
+      },
+      {
+        "path": "source/components/n-radio/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:b04dcb30ba4f19b8858a7885ff92fd718ae878d2133541ef54807dfbb170245f",
+        "byte_length": 10371
+      },
+      {
+        "path": "source/components/n-rate/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:fffe4083763765f6d963ab48c93d81096d418c2b529a3795935a938a2d7a0e36",
+        "byte_length": 9032
+      },
+      {
+        "path": "source/components/n-result/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:942727f1e63292bd59b0e902bd3bf662a78b844eb82b7f48e348939696cee0f0",
+        "byte_length": 9792
+      },
+      {
+        "path": "source/components/n-scrollbar/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:768c8be0371c41a9df724537e3bb08822eb3f72a8151e883621b681422f806cf",
+        "byte_length": 6742
+      },
+      {
+        "path": "source/components/n-select/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:413433df9c7cb9c80f5bd9caa25e3501f81197b1654e56cf4691d03c9a8c3f5f",
+        "byte_length": 15054
+      },
+      {
+        "path": "source/components/n-skeleton/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:38cd033309b144258416bd7c1b2f9c57dcbd4fd14b4147a6b5b7342d5849154c",
+        "byte_length": 9746
+      },
+      {
+        "path": "source/components/n-slider/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:a07496a9774a6d4c94e4d7d66f4bb0d36f2e8f6ab1d175a9092763bd34f316e0",
+        "byte_length": 10824
+      },
+      {
+        "path": "source/components/n-space/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:6fabbdaf8f5658089d9b10fbf4353bba5dacfcaf74e237df819b250f915b3af0",
+        "byte_length": 5648
+      },
+      {
+        "path": "source/components/n-spin/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:36284e442a65a0005bc69888d99a44913ca3b00db472c56083aeb0fc3a2f74d8",
+        "byte_length": 10203
+      },
+      {
+        "path": "source/components/n-split/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:1a7481a19cae17918de36cfb320f7750b6c199ffcb28abaf418ca5b8d14c6fe9",
+        "byte_length": 6715
+      },
+      {
+        "path": "source/components/n-statistic/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:33f455337228ea7f9498ef5e2b970dfe81e6689dbf2e88b92b7714c74d6b5791",
+        "byte_length": 10050
+      },
+      {
+        "path": "source/components/n-steps/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:993f983b81d31d28f2dd3618f2fccde39ef07e83de0e1bd141dea5d122f46940",
+        "byte_length": 8093
+      },
+      {
+        "path": "source/components/n-switch/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:a500aed4ba2ba7b7d32568ca4e5b8491985f6aba62c9b02b652f8bf098be7b81",
+        "byte_length": 11512
+      },
+      {
+        "path": "source/components/n-table/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e55451742d098dd959838f4ccc2e8a9f30efef92c814e8818bc93513119b8ef8",
+        "byte_length": 5878
+      },
+      {
+        "path": "source/components/n-tabs/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:f8a0c93768ebe472a1b3dd5191a58b383a3c96757d3c1dd63f6023ce657458ac",
+        "byte_length": 10306
+      },
+      {
+        "path": "source/components/n-tag/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:25b81d3be66fa24ad6bb18200d6ae98de2672dbf254a2d87f2b851284fbb39e9",
+        "byte_length": 10090
+      },
+      {
+        "path": "source/components/n-thing/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:ee6bbafdffd599e953a254f6a67846a84ce194e677867c5df9e6dc3a5f8923d3",
+        "byte_length": 6875
+      },
+      {
+        "path": "source/components/n-time-picker/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e95bbf04503e564044f9aabf71074180fad58eccd59237e25d1dd560e46e0d4b",
+        "byte_length": 15299
+      },
+      {
+        "path": "source/components/n-time/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:6bb7d95c5becbbfb8a69a441e81e2d40b753250c27daf010cc2aee8d85c9f679",
+        "byte_length": 5761
+      },
+      {
+        "path": "source/components/n-timeline/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:8696b92e58d3692e5960eb32a9ae0bcb900e8451a56bf4a35aa8d4b27671f54b",
+        "byte_length": 8228
+      },
+      {
+        "path": "source/components/n-tooltip/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:9d8009aad80e7c88ca3e804524352b2ffab8dd593f30487824ae87e12481eb1c",
+        "byte_length": 10613
+      },
+      {
+        "path": "source/components/n-transfer/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:ebd75e834f9518be1a3bf3e02f0983a8b5718f5b530bea11e49e9bce3d05773d",
+        "byte_length": 10024
+      },
+      {
+        "path": "source/components/n-tree-select/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:dbac33c9391cd650fa0fc8cd027aaa97cca98b48e9cc86bcb0e24ebdbd88b75e",
+        "byte_length": 13494
+      },
+      {
+        "path": "source/components/n-tree/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:499527bca075cb7a0f8f0adcdcee773c64030698af6f443b703cd62b6ae1c17f",
+        "byte_length": 13079
+      },
+      {
+        "path": "source/components/n-typography/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:8b71c90771fb6f4beb0568b650b6ab592f710236957569780b570cd670578cc8",
+        "byte_length": 7557
+      },
+      {
+        "path": "source/components/n-upload/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:4f68361c392b875c37b7cd45b0c4a5bdcc110211807aac2335e15f6bb609338d",
+        "byte_length": 15759
+      },
+      {
+        "path": "source/components/n-virtual-list/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:d4467e95a29aa925c3059e0ee3095eedf01443642290b9b0037ee121785aa4a5",
+        "byte_length": 8523
+      },
+      {
+        "path": "source/components/n-watermark/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:d85474a62bf6cdc141ffec4129ba33eab4f9bf1abd5ec2f062bdc6d0b50e1242",
+        "byte_length": 8063
+      },
+      {
+        "path": "source/LICENSE",
+        "kind": "license",
+        "content_hash": "sha256:a62c60c0db26cbc3864a3bf88581ff0dfd995850b73a288b997c17b1d6167c33",
+        "byte_length": 1101
+      },
+      {
+        "path": "source/naive-ui-components/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:3c814f1be29ee479898340d21a7c35d9e02e6515e487ed20083b70127fff18a9",
+        "byte_length": 17489
+      },
+      {
+        "path": "source/naive-ui-dark-mode/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7ff247d79dae6f8f265a4120b38b92ed35e5c36987209e458702504e528ec4a9",
+        "byte_length": 10807
+      },
+      {
+        "path": "source/naive-ui-design-border/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:7028b1543c59553cb141f9bda65b746f9fe8f30c14e9866828fe9c1eec090b5c",
+        "byte_length": 6562
+      },
+      {
+        "path": "source/naive-ui-design-color/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:2843968f679136ef2065da80290ab2b924670a47d0dbb6aedcfe6dfde4a6bbda",
+        "byte_length": 8048
+      },
+      {
+        "path": "source/naive-ui-design-layout/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:37dc4479d05bdcb9bf434a018323950e1afcda277ebcf405f4c17b406d28abe6",
+        "byte_length": 8331
+      },
+      {
+        "path": "source/naive-ui-design-overview/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:65119b3d893f16a84db40300fdef04844567b1fa6d39690223dfc6c578767cc6",
+        "byte_length": 8192
+      },
+      {
+        "path": "source/naive-ui-design-typography/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:f543fc32053d8e311ccd35f88a557655817f54483fd309f2d6b54e351c4a7a19",
+        "byte_length": 7151
+      },
+      {
+        "path": "source/naive-ui-i18n/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:4b5842c00e33cee82515ff211072dc29151b66bca1bef6fb8d3b732dd713efcd",
+        "byte_length": 8847
+      },
+      {
+        "path": "source/naive-ui-quickstart/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:19ec11beefa5ad1a93abc8936397b7924f9512ad5815697f975f232bdd7e0a5b",
+        "byte_length": 4501
+      },
+      {
+        "path": "source/naive-ui-ssr/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:2247442f1162bc7bfadacfe511f65924857d4020260a3d50eb0a40decd53aa24",
+        "byte_length": 8558
+      },
+      {
+        "path": "source/naive-ui-theming/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:5e98a5f4b920ba4ac6cddf428bc0dc46a17037a7066d3f17e195c3d764019c11",
+        "byte_length": 6728
+      },
+      {
+        "path": "source/README_CN.md",
+        "kind": "supporting",
+        "content_hash": "sha256:711f00262fab369ae32d8f3628929c416c4bcad65b7a8426345f1b323a3e218a",
+        "byte_length": 8845
+      },
+      {
+        "path": "source/README.md",
+        "kind": "supporting",
+        "content_hash": "sha256:d840d0aea7d848c7a274952072b14cb7b505b639088f82512de2df8217f2668b",
+        "byte_length": 9327
+      },
+      {
+        "path": "source/SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e3c718336a8280a6c83b8cb22fca27f2755daab4fe6370296863351a74dec2dd",
+        "byte_length": 17883
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:09af46debe3a70813bc613ce72424b07ea1b90681aab319e8fe88b5f91cac194",
+        "byte_length": 677
+      }
+    ]
+  }
+}

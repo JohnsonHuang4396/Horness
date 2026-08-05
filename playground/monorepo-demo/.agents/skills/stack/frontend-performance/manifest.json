@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontend-performance",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "分析并优化前端性能，覆盖加载、包体、渲染、请求瀑布、缓存、图片字体、长列表和交互响应；所有优化必须有基线、指标和回归证据。",
+  "entrypoint": "skills/stack/frontend-performance/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P2",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug",
+    "release"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "性能优化",
+      "响应缓慢",
+      "页面卡顿",
+      "前端包体",
+      "首屏加载",
+      "加载速度",
+      "优化渲染"
+    ],
+    "negative": [
+      "没有基线时不得声称性能提升"
+    ]
+  },
+  "dependencies": [
+    "impact-analysis",
+    "frontend-testing",
+    "frontend-ci-verify"
+  ],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [
+      "shell-process",
+      "browser"
+    ],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "derived://v3/frontend-performance",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:cae2b46d6644e6bf14759b4ccf42438314cd3e325f65f548dcedbd846cdbf59b",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "frontend-performance-contract",
+      "browser-validation"
+    ],
+    "minimum_success_rate": 0.9,
+    "maximum_security_violations": 0
+  },
+  "status": "active",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:cae2b46d6644e6bf14759b4ccf42438314cd3e325f65f548dcedbd846cdbf59b",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:9680ae559aa78bb916337a8db960d3f8adc7a544f741b5798429499e3b5f15d4",
+        "byte_length": 953
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:e9112cb6612177d262248f81225104121c5019f160ab5102bfdc627cd435927c",
+        "byte_length": 387
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:bcc44181c103d0cbb8e538426e9b11d802da06a4591f64dbc7f3666309c64fe5",
+        "byte_length": 461
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:f4ffb9b65857368df91940c197973349239f2c4bcfa8bdba770789dd52183544",
+        "byte_length": 580
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:ffda0e63cede36dcf8022ceb4a811557a677e9f950d692109e37b89a0f2cfb3f",
+        "byte_length": 607
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:712387f74d2f4524b948a54d0bb2974a0902960c65c2a35f30e28b94bda9db55",
+        "byte_length": 237
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:8bfc3b957f4aeb9afcdc000ceecccc05f5c13b5d48c0855ad68b7d92f0b2bac7",
+        "byte_length": 3468
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:e3edf0b895b40143a1b5f92d5f48402e048a94e2ba67e6bf35f2dfafa1a545dd",
+        "byte_length": 3517
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:46421f4e61773e15c6c09d51ab5ba19fec178907db271b2322aebf59362f8739",
+        "byte_length": 680
+      }
+    ]
+  }
+}

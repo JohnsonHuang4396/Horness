@@ -2,14 +2,13 @@
 import { cpSync, existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { generateConfig, validateConfig, type AgentId } from './config.ts'
-import { detectStack } from './detect.ts'
+import { detectStack, type Detection } from './detect.ts'
 
 /** 模板根目录。打包时由 tsdown 注入指向 dist/template；源码运行时回退到项目根 template。 */
 declare const __HARNESS_TEMPLATE_ROOT__: string | undefined
 
 export function templateRoot(): string {
-  const root =
-    typeof __HARNESS_TEMPLATE_ROOT__ === 'string' ? __HARNESS_TEMPLATE_ROOT__ : '../template/'
+  const root = typeof __HARNESS_TEMPLATE_ROOT__ === 'string' ? __HARNESS_TEMPLATE_ROOT__ : '../template/'
   return new URL(root, import.meta.url).pathname
 }
 
@@ -23,12 +22,7 @@ export interface InstallOpts {
 
 export interface InstallReport {
   dryRun: boolean
-  detected: {
-    stack: string
-    lang: string
-    packageManager: string
-    evidence: string[]
-  }
+  detected: Detection
   actions: string[]
   backup?: string
   configPath?: string
@@ -105,6 +99,7 @@ export function writeConfig(target: string, opts: InstallOpts, dryRun: boolean):
     stack: opts.stack ?? detected.stack,
     lang: detected.lang,
     packageManager: detected.packageManager,
+    workspaces: detected.isMonorepo ? detected.workspaces : undefined,
     agents: resolveAgents(opts.agents),
   })
   const v = validateConfig(cfg)

@@ -19,7 +19,22 @@
         "stack": { "type": "string", "description": "react|vue|java-spring|node|python|none|..." },
         "packageManager": { "type": "string", "description": "pnpm|npm|yarn|maven|gradle|..." },
         "testEntry": { "type": ["string", "null"] },
-        "buildCommand": { "type": ["string", "null"] }
+        "buildCommand": { "type": ["string", "null"] },
+        "workspaces": {
+          "type": "array",
+          "description": "monorepo 各工作区的技术栈清单（仅 monorepo 根生成）",
+          "items": {
+            "type": "object",
+            "required": ["rel", "lang", "stack", "packageManager"],
+            "additionalProperties": false,
+            "properties": {
+              "rel": { "type": "string", "description": "相对根的路径" },
+              "lang": { "type": "string" },
+              "stack": { "type": "string" },
+              "packageManager": { "type": "string" }
+            }
+          }
+        }
       }
     },
     "harness": {

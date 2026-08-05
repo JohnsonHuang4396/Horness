@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "database-change",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Design and review safe relational database schema or data changes, including compatibility, expand-contract rollout, backfill, locking, indexing, transaction behavior, rollback, and verification. Use when software tasks add or alter tables, columns, indexes, constraints, queries, migrations, or persisted data semantics.",
+  "entrypoint": "skills/optional/database-change/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Design and review safe relational database schema or data changes, including compatibility, expand-contract rollout, backfill, locking, indexing, transaction behavior, rollback, and verification. Use when software tasks add or alter tables, columns, indexes, constraints, queries, migrations, or persisted data semantics."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-OPTIONAL-database-change.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:2c2d4507eba0bd4885eae86b442b44c49ed87992ec93330007f53682918711af",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:2c2d4507eba0bd4885eae86b442b44c49ed87992ec93330007f53682918711af",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:a31f51c6e7e2d1004b71a98dc620d52f2c6ea2f0452888944f0cf4d34a2d0dff",
+        "byte_length": 948
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:d023f11acc660b8c2dbcce48a876371af9e8dfd0ddf22d02b2ab88ffc7a4865a",
+        "byte_length": 377
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:c3a3e8a22ba2d58d25ee6c3928ab58165af581f24822aaf17d09c1de500b763c",
+        "byte_length": 451
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:060ab57e37771d1b3d3c7fc76ae2f363346db9d1fe91f831aed3ef63a1676821",
+        "byte_length": 570
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:4779cc4358aa8f3ee298c76f9f69c743bb9de57c5ad9da190f1275c816b81e5e",
+        "byte_length": 597
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:d360a641d5816cf0230f2c9078383e66680f759bb8553cc8d2ec429919811183",
+        "byte_length": 232
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:9d3b12d6378e64ef03cb6817aa251e67c25937c7813b4189803909ba039165ff",
+        "byte_length": 3598
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:8d5a80697ff686963669f4bbfe5046afd59cc8d57c7a42b052f3f39dc093b98a",
+        "byte_length": 3504
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:4e0817fdfa834b5ca8fbace762c8fac00f942836293184fea76023e79d007d9a",
+        "byte_length": 675
+      }
+    ]
+  }
+}

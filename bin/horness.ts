@@ -66,9 +66,12 @@ function main(): void {
   consola.success(args.dryRun ? '预览完成（未写入文件）' : '初始化完成')
 
   // 探测结果
-  consola.info(
-    `技术栈: ${colors.cyan(report.detected.stack)} / ${colors.cyan(report.detected.lang)} / ${colors.cyan(report.detected.packageManager)}`,
-  )
+  consola.info(`技术栈: ${colors.cyan(report.detected.stack)} / ${colors.cyan(report.detected.lang)}`)
+  if (report.detected.isMonorepo && report.detected.workspaces.length) {
+    for (const w of report.detected.workspaces) {
+      consola.log(`  ${colors.dim(`  ${w.rel}: ${w.stack} / ${w.lang} / ${w.packageManager}`)}`)
+    }
+  }
   if (report.detected.evidence.length) {
     consola.log(`  ${colors.dim('证据: ' + report.detected.evidence.join(', '))}`)
   }

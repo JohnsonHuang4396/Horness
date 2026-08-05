@@ -1,0 +1,13 @@
+{
+  "skills": [".agents/skills"],
+  "prompts": [
+    "bootstrap",
+    "doctor",
+    "evolution",
+    "harness-check",
+    "harness",
+    "scan",
+    "uninstall"
+  ],
+  "defaultProjectTrust": true
+}

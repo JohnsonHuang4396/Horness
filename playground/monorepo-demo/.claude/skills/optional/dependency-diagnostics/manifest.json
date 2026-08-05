@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dependency-diagnostics",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Diagnose package resolution, version alignment, lockfile, build plugin, runtime compatibility, and vulnerability problems across supported ecosystems using native package-manager evidence. Use for install, compile, missing package, conflict, checksum, BOM, plugin, or dependency upgrade failures.",
+  "entrypoint": "skills/optional/dependency-diagnostics/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Diagnose package resolution, version alignment, lockfile, build plugin, runtime compatibility, and vulnerability problems across supported ecosystems using native package-manager evidence. Use for install, compile, missing package, conflict, checksum, BOM, plugin, or dependency upgrade failures."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-OPTIONAL-dependency-diagnostics.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:61914412b3f983881184e0d0e8e397525b455743b7fca634d3dbb588ba3bfc1f",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:61914412b3f983881184e0d0e8e397525b455743b7fca634d3dbb588ba3bfc1f",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:4b5d1a69b6f194573246225f8a47f46511b3d56146ee33176976f63772b4a412",
+        "byte_length": 955
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:6927b4531dbf5027d11a9719679033906e781e69ea38482658ac3c530488200d",
+        "byte_length": 391
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:4219f80949402b6f26cb9cf2a4755e08fb63a4eec3997af835f6e75ede186c3b",
+        "byte_length": 465
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:b05c35fb70852178afa13a850b531d0a50a7bda967dacf87fb9bdbbc7c8457e7",
+        "byte_length": 584
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:f3b66966a9f8f266d9793e5e604ad2ef4659e809b96e5d943e335c665b0f2471",
+        "byte_length": 611
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:802fa023304554e367abecfd7286cd5add7039087b9271b7f1405b5c05ea138f",
+        "byte_length": 239
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:ed4f0a11df0e630e1ca65627502ec1c086bd876550c2dd38ee8169442ce2a501",
+        "byte_length": 3580
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:6070cde80d9e5aa91dcaa2b3ab63ec4cf4371c9b0ee9c87b30418fb411b81591",
+        "byte_length": 3467
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:7929975743e25572a1a3be1f834b4adb86c08b27dd9ec072e9bd6742e0719bc0",
+        "byte_length": 682
+      }
+    ]
+  }
+}

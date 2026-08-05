@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "id": "java-spring-engineering",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "在已确认 Java、Spring、Maven 或 Gradle 项目中实施后端 API、事务、配置、依赖和测试变更，并保持运行时与对外契约兼容。",
+  "entrypoint": "skills/stack/backend-java-spring/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "java-spring-engineering"
+    ],
+    "negative": [
+      "没有项目证据时不加载 java-spring-engineering"
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://stack/java-spring-engineering",
+    "license": "UNKNOWN - review required before redistribution",
+    "content_hash": "sha256:a17e3239f5d215965733168a97f11698e180cfd03c5a62ed6bd9651deb10f2fe",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-bundle-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 11,
+    "content_hash": "sha256:a17e3239f5d215965733168a97f11698e180cfd03c5a62ed6bd9651deb10f2fe",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:bc3103c62ebb6eedaed3e1b1e84e175cd404e262a33255fc58e5341a509a446d",
+        "byte_length": 952
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:7093f18186c8659bf5553fcd773e4b801bab51283e038faa78204f3be7029b3a",
+        "byte_length": 385
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:7b259d580543d46ff1aed16b06504ca4e36a4fef0f96b4270bbb4ed31d5deb06",
+        "byte_length": 459
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:421b68fed412f463ee07734bbbaac149a58cc5a9582a39382d4cc635cf64f569",
+        "byte_length": 578
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:cb10f64bf0b05f4189e2bfd52bcd58066b0dc98ff3a8cb7039977c8be416ff92",
+        "byte_length": 605
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:a19172cee99b9fa235932a9dffc65c0c8b3d615a994ddb0c6f35e563a13104f6",
+        "byte_length": 236
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:312807e85d013c9280317bd3abf67cdedc877804adc36eab58ae39585249624c",
+        "byte_length": 3439
+      },
+      {
+        "path": "references/stack-pack.md",
+        "kind": "reference",
+        "content_hash": "sha256:f7bc7de3025adbd814da33d52dde4fc87ebc960a272421d4997008eb957f3150",
+        "byte_length": 3538
+      },
+      {
+        "path": "references/verification.md",
+        "kind": "reference",
+        "content_hash": "sha256:c9c75bc8a1d38bf6eb3568b3983bacfe78ab9911777102e9164a7d58ba2d7eb6",
+        "byte_length": 196
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:a8b50f359df474abfd64db35114061965d5e0e9cd18b9003f96bb63a02a2c871",
+        "byte_length": 2035
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:8a7c95b9aba4e9daf3a35d18b33b81c37f7ae805477b0a601bdfd79f0fb01981",
+        "byte_length": 679
+      }
+    ]
+  }
+}

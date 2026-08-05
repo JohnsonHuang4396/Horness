@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "id": "database-engineering",
+  "version": "1.0.0",
+  "kind": "skill",
+  "description": "在已确认 SQL、MySQL、PostgreSQL、Flyway、Liquibase 或数据访问项目中设计可兼容、可验证、可回滚的数据库变更。",
+  "entrypoint": "skills/stack/database-engineering/SKILL.md",
+  "scope": "stack",
+  "stages": [
+    "P1",
+    "P3",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "task_types": [
+    "small-change",
+    "feature",
+    "debug"
+  ],
+  "assurance_modes": [
+    "standard",
+    "high-assurance"
+  ],
+  "triggers": {
+    "positive": [
+      "database-engineering"
+    ],
+    "negative": [
+      "没有项目证据时不加载 database-engineering"
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "read-workspace",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "v3://stack/database-engineering",
+    "license": "UNKNOWN - review required before redistribution",
+    "content_hash": "sha256:2fceaf10526473f4f4552e5db5c57ca779d3dd452327d238ccf4f27071350d54",
+    "verified_at": "2026-07-31T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-bundle-contract"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 11,
+    "content_hash": "sha256:2fceaf10526473f4f4552e5db5c57ca779d3dd452327d238ccf4f27071350d54",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:d57fad5cda8524bca9977a68d2783d730a1091a22a70c3d4d351c18ed66fdbb4",
+        "byte_length": 953
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:6454f5709498fc189c3e13c3643b5462c582abbaac8bfeb7452154d1264166fd",
+        "byte_length": 387
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:85552b1afcf64649f04cf2e2b350dceae3ec166370700a80a50ae9d0246e9216",
+        "byte_length": 461
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:3c8164ea382b5102850b9766e513b118f96960b0d4d5b723905dd6482205e931",
+        "byte_length": 580
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:9cfe89d3fdcca1067b8ffe5fba651df68874dffef91b3f06dbaddd90220fbca4",
+        "byte_length": 607
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:b5a86f14c1d3aa44b6589778f0d7dcc98dae8dbcbea72811b63b37614474d2cf",
+        "byte_length": 237
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:4505609897ef745473473222464b314b2c6e503288cece3f65f859056de8ea80",
+        "byte_length": 3425
+      },
+      {
+        "path": "references/stack-pack.md",
+        "kind": "reference",
+        "content_hash": "sha256:03c74d61ce8696c3fef6a320b822861a871c20889451b5f2fd82a925890b095d",
+        "byte_length": 3534
+      },
+      {
+        "path": "references/verification.md",
+        "kind": "reference",
+        "content_hash": "sha256:e15ddd88f970442dcd420f764aa736ca50cc850d5149899b03c284cce71ca38d",
+        "byte_length": 128
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:9fa19eed1d8f6db8026329981b060e04bd546b3990aaa221606eb3730a6ac83d",
+        "byte_length": 1182
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:d2c3d20ec2554ae52c15a2c8935471a53b2fa32ba2a314a50eb0eacac716f161",
+        "byte_length": 680
+      }
+    ]
+  }
+}

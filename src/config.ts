@@ -15,6 +15,16 @@ export const HarnessConfigSchema = z.object({
     packageManager: z.string().min(1),
     testEntry: z.string().nullable(),
     buildCommand: z.string().nullable(),
+    workspaces: z
+      .array(
+        z.object({
+          rel: z.string().min(1),
+          lang: z.string().min(1),
+          stack: z.string().min(1),
+          packageManager: z.string().min(1),
+        }),
+      )
+      .optional(),
   }),
   harness: z.object({
     assuranceDefault: z.enum(['fast', 'standard', 'high-assurance']),
@@ -66,6 +76,13 @@ export const DEFAULT_ROLES = [
   'database-reviewer',
 ] as const
 
+export interface WorkspaceInfo {
+  rel: string
+  lang: string
+  stack: string
+  packageManager: string
+}
+
 export interface GenerateOpts {
   name: string
   lang?: string
@@ -73,6 +90,7 @@ export interface GenerateOpts {
   packageManager?: string
   testEntry?: string | null
   buildCommand?: string | null
+  workspaces?: WorkspaceInfo[]
   assuranceDefault?: AssuranceMode
   artifactLang?: string
   installedSkills?: string[]
@@ -89,6 +107,7 @@ export function generateConfig(opts: GenerateOpts): HarnessConfig {
       packageManager: opts.packageManager ?? 'unknown',
       testEntry: opts.testEntry ?? null,
       buildCommand: opts.buildCommand ?? null,
+      ...(opts.workspaces?.length ? { workspaces: opts.workspaces } : {}),
     },
     harness: {
       assuranceDefault: opts.assuranceDefault ?? 'standard',
@@ -112,6 +131,6 @@ export function validateConfig(c: unknown): ValidateResult {
   if (r.success) return { ok: true, errors: [] }
   return {
     ok: false,
-    errors: r.error.issues.map((i) => `${i.path.join('.') || 'config'}: ${i.message}`),
+    errors: r.error.issues.map(i => `${i.path.join('.') || 'config'}: ${i.message}`),
   }
 }

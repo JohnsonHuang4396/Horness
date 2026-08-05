@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "MonorepoDemo",
+    "lang": "multi",
+    "stack": "monorepo",
+    "packageManager": "pnpm",
+    "testEntry": null,
+    "buildCommand": null,
+    "workspaces": [
+      {
+        "rel": "backend",
+        "stack": "java-spring",
+        "lang": "java",
+        "packageManager": "maven"
+      },
+      {
+        "rel": "frontend",
+        "stack": "vue",
+        "lang": "ts",
+        "packageManager": "pnpm"
+      },
+      {
+        "rel": "frontend2",
+        "stack": "react",
+        "lang": "ts",
+        "packageManager": "pnpm"
+      }
+    ]
+  },
+  "harness": {
+    "assuranceDefault": "standard",
+    "artifactLang": "zh",
+    "rolesEnabled": [
+      "controller",
+      "requirement-analyst",
+      "design-architect",
+      "developer",
+      "quality-reviewer",
+      "security-reviewer",
+      "release-reviewer",
+      "database-reviewer"
+    ],
+    "installedSkills": [
+      "api-contract-design",
+      "change-management",
+      "code-review",
+      "controlled-evolution",
+      "eval-authoring",
+      "harness-doctor",
+      "impact-analysis",
+      "implementation",
+      "migration-refactor",
+      "project-discovery",
+      "project-rule-authoring",
+      "release-readiness",
+      "requirement-analysis",
+      "requirement-preprocessing",
+      "risk-assessment",
+      "security-review",
+      "self-evolution",
+      "solution-design",
+      "systematic-debugging",
+      "task-planning",
+      "test-strategy",
+      "verification"
+    ],
+    "agents": [
+      "claude",
+      "codex",
+      "opencode",
+      "pi"
+    ],
+    "hooks": {
+      "FileChanged": ".harness/scripts/hook-file-change.sh"
+    }
+  }
+}

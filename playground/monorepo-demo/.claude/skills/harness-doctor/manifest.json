@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "harness-doctor",
+  "version": "0.1.0",
+  "kind": "skill",
+  "description": "Perform a read-only health assessment of a coding Agent Harness across task understanding, controlled execution, change verification, reliable delivery, and experience learning. Use to distinguish configured assets from actual use and proven effectiveness by cross-checking static assets, real run traces, project foundations, mechanical quality, and final outcomes.",
+  "entrypoint": "skills/core/harness-doctor/SKILL.md",
+  "scope": "core",
+  "triggers": {
+    "positive": [
+      "Perform a read-only health assessment of a coding Agent Harness across task understanding, controlled execution, change verification, reliable delivery, and experience learning. Use to distinguish configured assets from actual use and proven effectiveness by cross-checking static assets, real run traces, project foundations, mechanical quality, and final outcomes."
+    ],
+    "negative": [
+      "Do not use for work outside this capability's stated responsibility."
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "replaces": [],
+  "permissions": {
+    "tools": [],
+    "filesystem": "none",
+    "network": "none",
+    "secrets": [],
+    "approval_level": "none"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "source": {
+    "type": "first-party",
+    "uri": "docs/blueprint/04-ASSETS-SKILLS-PACKS-DOMAINS.md#SKILL-CORE-harness-doctor.md",
+    "license": "UNLICENSED",
+    "content_hash": "sha256:79d673a0bfd660e893ee2ef2f017a0f1e2f607670cce5f5f0d39f2ce3d3c3a7e",
+    "verified_at": "2026-07-27T00:00:00.000Z"
+  },
+  "evaluation": {
+    "suite_ids": [
+      "skill-manifest-contract",
+      "source-enhanced-catalog"
+    ],
+    "minimum_success_rate": 1,
+    "maximum_security_violations": 0
+  },
+  "status": "candidate",
+  "bundle": {
+    "schema_version": "1.0.0",
+    "completeness": "complete",
+    "root": ".",
+    "file_count": 9,
+    "content_hash": "sha256:79d673a0bfd660e893ee2ef2f017a0f1e2f607670cce5f5f0d39f2ce3d3c3a7e",
+    "files": [
+      {
+        "path": "checklists/acceptance.md",
+        "kind": "checklist",
+        "content_hash": "sha256:5d2eb286a42aed023a6f0da47fe105a147c6083f7259232c4051accc0df108d5",
+        "byte_length": 947
+      },
+      {
+        "path": "evals/negative-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:5bb4d30f917c48d592a40098fd2b64d147d83182855bdbf103829d67c739dfcf",
+        "byte_length": 375
+      },
+      {
+        "path": "evals/positive-cases.json",
+        "kind": "eval",
+        "content_hash": "sha256:ed8977a923b3c33dc396dee6b0608436abbffa5d320bba22bdd9def9ac6bef34",
+        "byte_length": 449
+      },
+      {
+        "path": "examples/negative.md",
+        "kind": "example",
+        "content_hash": "sha256:35a17126c965acb375bebf5448f59fa7b8093c8d02c0da24ac574776006ce7e5",
+        "byte_length": 568
+      },
+      {
+        "path": "examples/positive.md",
+        "kind": "example",
+        "content_hash": "sha256:cb3ff25cfbaf0eab976631626c8764176cc19c6082d8d1bdf4362940b8b06515",
+        "byte_length": 595
+      },
+      {
+        "path": "NOTICE.md",
+        "kind": "license",
+        "content_hash": "sha256:6949a8af673dff654a24d7c2aab00018d1e43e76677e8e8fe61b6b77d0cd57e3",
+        "byte_length": 231
+      },
+      {
+        "path": "references/operating-guide.md",
+        "kind": "reference",
+        "content_hash": "sha256:ac754fa5001ceb25162e90df9f810f9d550d33ee3a79c52ccdf3fd4908712639",
+        "byte_length": 3642
+      },
+      {
+        "path": "SKILL.md",
+        "kind": "entry",
+        "content_hash": "sha256:72dfec6298d972f900ea25f7f29d27e0335f73cc9366cc0e4b59bce7edf566fa",
+        "byte_length": 3544
+      },
+      {
+        "path": "templates/evidence-report.md",
+        "kind": "template",
+        "content_hash": "sha256:efbd95f29877c6088de147ee008036bfa4703dbd056664fe5b22ef52d04b504b",
+        "byte_length": 674
+      }
+    ]
+  }
+}

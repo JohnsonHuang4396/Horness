@@ -55,7 +55,13 @@
   "packageManagers": [
     { "id": "pnpm", "signals": [{ "type": "file-exists", "path": "pnpm-lock.yaml" }] },
     { "id": "yarn", "signals": [{ "type": "file-exists", "path": "yarn.lock" }] },
-    { "id": "bun", "signals": [{ "type": "file-exists", "path": "bun.lockb" }] },
+    {
+      "id": "bun",
+      "signals": [
+        { "type": "file-exists", "path": "bun.lock" },
+        { "type": "file-exists", "path": "bun.lockb" }
+      ]
+    },
     { "id": "npm", "signals": [{ "type": "file-exists", "path": "package-lock.json" }] },
     { "id": "maven", "signals": [{ "type": "file-exists", "path": "pom.xml" }] },
     { "id": "gradle", "signals": [{ "type": "file-exists", "path": "build.gradle" }] }
