@@ -60,14 +60,14 @@ horness --version
 
 ## 跨 agent 设计
 
-| 能力 | Claude Code | Codex | OpenCode | Pi |
-|---|---|---|---|---|
-| 配置 | `.claude/settings.json` | `.codex/config.toml` | `opencode.json` | `.pi/settings.json` |
-| 角色(8) | `.claude/agents/*.md` | `.codex/agents/*.toml` | `.opencode/agent/*.md` | `.pi/agents/*.md` |
-| 命令(7) | `.claude/commands/*.md` | 无（用技能/AGENTS） | `.opencode/command/*.md` | `.pi/prompts/*.md` |
-| 技能 | `.claude/skills`（镜像） | `.agents/skills` | `.agents/skills` | `.agents/skills` |
-| 证据 hook | settings.json hook | config.toml hooks | plugin/evidence.ts | extensions/evidence.ts |
-| 权限 | settings.json | config + rules | permission 键 | 扩展拦截 |
+| 能力      | Claude Code              | Codex                  | OpenCode                 | Pi                     |
+| --------- | ------------------------ | ---------------------- | ------------------------ | ---------------------- |
+| 配置      | `.claude/settings.json`  | `.codex/config.toml`   | `opencode.json`          | `.pi/settings.json`    |
+| 角色(8)   | `.claude/agents/*.md`    | `.codex/agents/*.toml` | `.opencode/agent/*.md`   | `.pi/agents/*.md`      |
+| 命令(7)   | `.claude/commands/*.md`  | 无（用技能/AGENTS）    | `.opencode/command/*.md` | `.pi/prompts/*.md`     |
+| 技能      | `.claude/skills`（镜像） | `.agents/skills`       | `.agents/skills`         | `.agents/skills`       |
+| 证据 hook | settings.json hook       | config.toml hooks      | plugin/evidence.ts       | extensions/evidence.ts |
+| 权限      | settings.json            | config + rules         | permission 键            | 扩展拦截               |
 
 - **共享核心**：`.harness/` 运行时、`AGENTS.md` 规则、`.agents/skills/` 技能中心——所有 agent 消费同一份，零重复。
 - **技能单一来源**：`.agents/skills/`（codex/opencode/pi 自动读取）；仅 Claude 需 `.claude/skills`，安装时镜像。
@@ -98,6 +98,7 @@ node --test src/*.test.ts bin/*.test.ts
 `pnpm build` 后 `dist/horness.mjs` 是**单个可执行 JS**（zod/consola/registry/版本号已内联），`bin` 字段指向它；`template/`（含全部 agent 脚手架）随 `dist/template` 分发，自包含。
 
 评审标准：
+
 - `./dist/horness.mjs --version` → 输出版本（单文件即可，不依赖 node_modules）
 - 消费者项目 `pnpm add <horness>` 后 `horness init <target> --agents all` 正常拷入四套 agent 脚手架、镜像技能、生成配置、合并 gitignore
 - `node --test src/*.test.ts bin/*.test.ts` 全过；`tsc --noEmit` 无错
@@ -107,7 +108,3 @@ node --test src/*.test.ts bin/*.test.ts
 - OpenCode 是**独立 CLI**（npm 包名 `opencode-ai`，也支持 curl 安装），不是本项目依赖；horness 只生成它的配置脚手架（`.opencode/` + `opencode.json`），要跑 OpenCode 需单独装 CLI。
 - codex 的 `rules/*.rules`（Starlark 执行策略）与 opencode/pi 的 TS hook 是按当前文档约定的**参考实现**；各 agent 版本 API 可能演进，接入时以目标版本为准微调（详见各文件内注释）。
 - Codex 无自定义 slash 命令，阶段流水线由 AGENTS.md 规则 + 技能 + 角色驱动。
-
-## 与当前项目的关系
-
-react-admin-kit 的 `.claude/`/`.harness/` 是这套模板的**派生来源**，保持现状不动；`template/` 是从它提炼的通用骨架（去掉了项目坑位与硬编码前端检查）。

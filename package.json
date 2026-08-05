@@ -1,17 +1,31 @@
 {
   "name": "horness",
   "version": "1.0.0",
-  "private": true,
   "description": "Agent Harness 通用模板 CLI（Node 24 原生 TS，zod 校验）",
   "bin": {
     "horness": "./dist/horness.mjs"
   },
   "type": "module",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsdown",
     "init": "node bin/horness.ts init",
     "test": "node --test src/*.test.ts bin/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "version": "pnpm build",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp"
+  },
+  "bumpp": {
+    "commit": "chore: release v%s",
+    "tag": "v%s",
+    "push": true
   },
   "dependencies": {
     "consola": "^3.4.2",
@@ -19,6 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.1.2",
+    "bumpp": "^12.1.1",
     "oxfmt": "^0.62.0",
     "tsdown": "^0.22.14",
     "typescript": "^7.0.2"
