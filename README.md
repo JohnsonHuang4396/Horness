@@ -33,22 +33,26 @@ horness/
 ```bash
 pnpm install
 pnpm build                 # tsdown 打包到 dist/horness.mjs（自包含，含 zod/consola/registry/template）
-pnpm link                  # 全局注册 `horness` 命令（或 npm link）
+pnpm setup                 # 首次：配置 PNPM_HOME（写入 shell，重启终端生效）
+pnpm link --global         # 全局注册 `horness` 命令（或 npm link）
 ```
+
+> 本地开发：`pnpm link --global` 后，任何目录直接 `horness <cmd>` 即可；`pnpm build` 后全局命令即反映最新版本（bin 指向 `dist/horness.mjs`）。
 
 ## 用法
 
 ```bash
-# 初始化（默认仅 Claude Code，向后兼容）
+# 初始化（target 可省略，默认当前目录；默认仅 Claude Code，向后兼容）
+horness init --name MyApp
 horness init /path/to/project --name MyApp
 
 # 指定 agent：claude / codex / opencode / pi，逗号分隔或 all
-horness init /path/to/project --name MyApp --agents all
+horness init --name MyApp --agents all
 horness init /path/to/project --name MyApp --agents codex,pi
 
 # 预览（不写入）/ 指定技术栈 / 强制覆盖
-horness init /path/to/project --name MyApp --dry-run
-horness init /path/to/project --name MyApp --stack java-spring
+horness init --name MyApp --dry-run
+horness init --name MyApp --stack java-spring
 horness init /path/to/project --name MyApp --force
 
 # 帮助 / 版本

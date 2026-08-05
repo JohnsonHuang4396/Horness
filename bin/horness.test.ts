@@ -83,8 +83,9 @@ test('CLI：解析 init 参数（位置参数 + 选项 + 默认值）', () => {
   assert.equal(a.force, false)
 })
 
-test('CLI：缺 target 时报错', () => {
-  assert.throws(() => parseInitArgs(['--dry-run']), /target/)
+test('CLI：缺 target 默认当前目录', () => {
+  assert.equal(parseInitArgs(['--dry-run']).target, '.')
+  assert.equal(parseInitArgs([]).target, '.')
 })
 
 test('CLI：未知 --flag 抛错', () => {

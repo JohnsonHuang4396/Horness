@@ -6,7 +6,7 @@ const AGENT_ENUM = z.enum(AGENT_IDS)
 const ALL = 'all'
 
 export const InitArgsSchema = z.object({
-  target: z.string({ message: '缺少目标目录（第一个位置参数）' }).min(1, '缺少目标目录（第一个位置参数）'),
+  target: z.string().default('.').describe('目标目录（第一个位置参数，默认当前目录）'),
   name: z.string().optional(),
   stack: z.string().optional(),
   dryRun: z.boolean().default(false),
