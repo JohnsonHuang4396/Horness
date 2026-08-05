@@ -1,3 +1,14 @@
 node_modules/
 dist/
 .pnpm-store/
+
+# playground 演示项目：忽略 init 生成的治理脚手架产物（技能中心与各 agent 脚手架）
+playground/**/.harness/
+playground/**/.agents/
+playground/**/.claude/
+playground/**/.codex/
+playground/**/.opencode/
+playground/**/.pi/
+playground/**/opencode.json
+playground/**/.harness.backup-*/
+playground/**/.gitignore

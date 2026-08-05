@@ -1,9 +1,0 @@
-{"type":"task.register","ts":"2026-08-05T01:29:10Z","path":"src/index.ts","cmd":"demo-cli --version","exit":0}
-{"type":"file","ts":"2026-08-05T01:29:10Z","path":"intake.md","cmd":"write","exit":0}
-{"type":"file","ts":"2026-08-05T01:29:10Z","path":"requirements.md","cmd":"write","exit":0}
-{"type":"file","ts":"2026-08-05T01:29:10Z","path":"design.md","cmd":"write","exit":0}
-{"type":"file","ts":"2026-08-05T01:29:10Z","path":"tasks.md","cmd":"write","exit":0}
-{"type":"file","ts":"2026-08-05T01:29:10Z","path":"verification-report.md","cmd":"write","exit":0}
-{"type":"file","ts":"2026-08-05T01:29:10Z","path":"acceptance-release.md","cmd":"write","exit":0}
-{"type":"tool","ts":"2026-08-05T01:29:10Z","path":"node --test","cmd":"test","exit":0}
-{"type":"task.complete","ts":"2026-08-05T01:29:10Z","path":"acceptance-release.md","cmd":"merge","exit":0}

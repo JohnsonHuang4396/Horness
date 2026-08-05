@@ -1,9 +1,0 @@
-{
-  "schema_version": "1.0.0",
-  "skill_id": "frontend-element-ui-v2",
-  "cases": [
-    { "id": "vue3-element-plus", "prompt": "在 Vue 3 项目中实现 Element Plus 表单。", "must_not_load": true, "reason": "应使用 Element Plus/Vue 3 Skill。" },
-    { "id": "unrelated-java", "prompt": "修改 Spring Boot 的事务配置。", "must_not_load": true, "reason": "与 Element UI 无关。" },
-    { "id": "keyword-only", "prompt": "文档中提到 element-ui，但本次只做数据库索引迁移。", "must_not_load": true, "reason": "关键词不能覆盖任务边界。" }
-  ]
-}
